@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
+    <title>MMaffi - Portifólio</title>
 
     <!--Icone do navegador-->
     <link rel="icon" href="images/MM_logo.png">
@@ -40,12 +40,7 @@
                 </ul>
             </nav> <!--menu_desktop-->
 
-            <!-- <div class="modolight">
-                <h4>Modo Light</h4>
-                <div class="trilho">                                 FAZER !!!!!!!!!!!!!!!!!!!!!!
-                    <div class="interruptor"></div>
-                </div>
-            </div> -->
+            
 
             <div class="botao_contato">
                 <a href="#formulario">
@@ -83,6 +78,14 @@
     </header>
 
     <main>
+
+        <!-- <div class="configuracoes"> -->
+
+            <!-- MODO LIGHT --------------------- TERMINARRRRRRRRRRRRRRRRRR-->
+            <!-- <i class="bi bi-sun darkmode"  id="darkmode"></i>
+            <i class="bi bi-moon lightmode" id="lightmode"></i> -->
+
+        <!-- </div> -->
 
         <section class="topo_site" id="inicio">
 
@@ -170,42 +173,63 @@
 
         </section> <!--sobre-->
 
+        <section class="parcerias" id="parcerias">
+
+            <div class="interface">
+
+                <h2 class="titulo" id="referencia">#<span>PARCEIROS</span>#</h2>
+
+                <div class="flex">
+
+                    <div class="parceiro1">
+
+                        <label class="textoparceiro1"  for=".parceiro1">CSFelix</label>
+                        <a href="https://csfelix.github.io/index.html" target="_blank">
+                            <img src="images/parcerias/logo180x180.png" alt="logo_felix" width="100px" height="100px">
+                        </a>
+
+                    </div>
+
+                    <!-- Parceiro2 EM BREVE ---------------------------------------------------------- -->
+                    <!-- <div class="parceiro2">
+                        <label class="textoparceiro2" for="parceiro2">Mateus Maffi</label>
+                        <a href="" target="_blank">
+                            <img src="images/MM_logo.png" alt="Mateus Maffi" width="100px" height="100px">
+                        </a>
+                    </div> -->
+
+                </div>
+
+            </div> <!--interface-->
+
+
+        </section> <!--parcerias-->
+
         <section class="formulario" id="formulario">
 
             <div class="interface">
 
                 <h2 class="titulo" id="referencia">ENTRE EM<span> CONTATO</span>.</h2>
                 
-                        <form action="https://formsubmit.co/mm.maffi@outlook.com" method="post">
-                            <table>
-                                <tr>
-                                    <td class="informacoes">
-                                        
-                                        <input type="text" name="NOME" id="nome" placeholder="Digite seu nome" required>
+                <form action="https://formsubmit.co/mm.maffi@outlook.com" method="post" autocomplete="off">
+                    <div class="divisaoform">
+                        <label for="NOME">Nome:</label>
+                        <input type="text" name="NOME" id="nome" placeholder="Digite seu nome" required>
+                        <label for="E-MAIL">E-Mail:</label>
+                        <input type="email" name="E-MAIL" id="email" placeholder="Digite seu email" required>
+                        <label for="MENSAGEM">Mensagem:</label>
+                        <textarea name="MENSAGEM" id="mensagem" placeholder="Digite sua mensagem" required></textarea>
+                    </div>
 
-                                        
-                                        <input type="email" name="E-MAIL" id="email" placeholder="Digite seu email" required>
-
-                                        
-                                        <input type="text" name="ASSUNTO" id="cidade" placeholder="Assunto  (Opicional)">
-
-                                    </td>
-                                    <td class="mensagems">
-                                        
-                                        <textarea name="MENSAGEM" id="mensagem" placeholder="Digite sua mensagem 
-
-Obs: Mensagens contendo apenas numerais não serão enviadas." required></textarea>
-
-                                    </td>
-                                </tr>
-                            </table>
-                            <div class="botao_enviar">
-                                <input type="submit" value="ENVIAR">
-                                <p>Caso este formulário esteja fora do ar, use o email que está no rodapé do site.</p>
-                            </div>
-                            <input type="hidden" name="_subject" value="NOVO CONTATO!">
-                            <input type="hidden" name="_captcha" value="false">
-                        </form>
+                    <div class="botao_enviar">
+                        <input type="submit" value="ENVIAR">
+                        <p>Caso este formulário esteja fora do ar, use o email que está no rodapé do site.</p>
+                    </div>
+                    <input type="hidden" name="_subject" value="NOVO CONTATO!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://mmaffi.github.io">
+                    <input type="text" name="_honey" style="display:none">
+                </form>
 
             </div> <!--interface-->
 

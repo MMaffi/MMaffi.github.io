@@ -59,4 +59,17 @@ botaorefresh.addEventListener('click', () => {
     location.reload()
 })
 
-// MODO DARK / LIGHT -------------------------------------------------------------------------------------
+// MODO DARK / LIGHT ------------------------TERMINARRRRRRRRRRRRRRRRRRR--------------------------
+
+// let dark = document.getElementById('darkmode')
+// let light = document.getElementById('lightmode')
+
+// dark.addEventListener('click', () => {
+//     dark.classList.toggle('light')
+//     light.classList.toggle('light')
+// })
+
+// light.addEventListener('click', () => {
+//     dark.classList.toggle('light')
+//     light.classList.toggle('light')
+// })

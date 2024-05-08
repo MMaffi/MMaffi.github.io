@@ -134,38 +134,48 @@ header nav.menu_desktop ul li{
     padding: 0 60px;
 }
 
-/* Estilo Modo Light   FAZER !!!!*/
+/* .configuracoes {
+    width: 300px;
+    height: 350px;
+    border-radius: 10%;
+    position: absolute;
+    background-color: #242424;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
 
-/* .modolight {
+/* Estilo Modo Light TERMINARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+
+/* .darkmode {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    padding: 0 2%;
-    
-
-}
-
-.modolight h4 {
+    position: absolute;
+    padding-top: 20px;
+    padding-right: 20px;
+    justify-content: right;
+    cursor: pointer;
     color: #fff;
-    font-weight: 400;
+    font-size: 25px;
 }
 
-.trilho {
+.lightmode {
     display: flex;
-    background-color: #424242;
-    height: 20px;
-    width: 38px;
-    border-radius: 15px;
+    position: absolute;
+    padding-top: 20px;
+    padding-right: 20px;
+    justify-content: right;
+    cursor: pointer;
+    color: #fff;
+    font-size: 25px;
+    visibility: hidden;
 }
 
-.interruptor {
-    display: flex;
-    background-color: black;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    transform: scale(.8);
+.darkmode.light {
+    visibility: hidden;
+}
+
+.lightmode.light {
+    visibility: visible;
 } */
 
 /* Estilo menu_mobile */
@@ -217,6 +227,8 @@ section.topo_site .flex{
     animation: perfil_flutuante 2s ease-in-out infinite alternate;
     box-shadow: 20px 20px 20px #04ff00;
     border-radius: 1000px;
+    width: 500px;
+    height: 500px;
 
 }
 
@@ -305,7 +317,112 @@ section.sobre .flex{
     text-align: justify;
 }
 
+/* Estilo Parcerias ------------------------------------------------------------------------------------ */
 
+section.parcerias {
+    padding: 100px 4%;
+}
+
+section.parcerias .flex {
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 120px;
+    
+}
+
+.parceiro1 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 50px;
+    position: relative;
+    width: 150px;
+    height: 40px;
+
+}
+
+.parceiro1 a {
+    position: absolute;
+    bottom: -60px;
+    background-color: black;
+    transition: 0.5s;
+    
+}
+
+.parceiro1 label {
+    position: absolute;
+    bottom: 15px;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.parceiro1:hover a {
+    bottom: -90px;
+    transition: 0.5s;
+    transform: scale(1.08);
+}
+
+
+.parceiro1:hover label {
+    bottom: 20px;
+    color: #fff;
+    visibility: visible;
+    transition: 0.5s;
+    
+}
+
+/* Parceiro 2 EM BREVE ------------------------------------------------------------------------------*/
+/* .parceiro2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 50px;
+    position: relative;
+    width: 150px;
+    height: 40px;
+}
+
+.parceiro2 a {
+    position: absolute;
+    bottom: -60px;
+    background-color: black;
+    transition: 0.5s;
+    
+}
+
+.parceiro2 label {
+    position: absolute;
+    bottom: 15px;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.parceiro2:hover a {
+    bottom: -90px;
+    transition: 0.5s;
+    transform: scale(1.08);
+}
+
+
+.parceiro2:hover label {
+    bottom: 20px;
+    color: #fff;
+    visibility: visible;
+    transition: 0.5s;
+    
+} */
 
 /* Estilo Formulario -------------------------------------------------------------------------------------*/
 
@@ -313,9 +430,18 @@ section.formulario{
     padding: 100px 4%;
 }
 
+section.formulario input{
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+section.formulario textarea{
+    margin: 0;
+    margin-bottom: 30px;
+}
+
 form{
-    margin: 0 auto;
-    justify-content: center;
+    margin-top: 40px;
 }
 
 form input{
@@ -325,29 +451,33 @@ form input{
     width: 50vh;
     color: #fff;
     font-size: 18px;
+    padding: 18px ;
+    margin: 30px 0;
+    outline: none;
 }
+
 form textarea{
     background-color: #242424;
     border: 0;
     border-radius: 10px;
     width: 50vh;
-    height: 24vh;
+    height: 90px;
     color: #fff;
     font-size: 18px;
-}
-
-section.formulario input{
-    display: block;
-    padding: 18px;
+    padding: 18px ;
     margin: 30px 0;
+    resize: vertical;
     outline: none;
 }
 
-section.formulario textarea{
-    padding: 30px ;
-    margin: 30px 0;
-    resize: none;
-    outline: none;
+form label {
+    color: #fff;
+}
+
+.divisaoform{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
 }
 
 form .botao_enviar{
@@ -356,7 +486,7 @@ form .botao_enviar{
    justify-content: center;
    align-items: center;
    height: 50px;
-   
+   margin-top: 30px;
 }
 
 form .botao_enviar p {
@@ -383,15 +513,6 @@ form .botao_enviar input:hover{
     box-shadow: 0px 0px 15px #04ff00;
     transform: scale(1.08);
     transition: 0.3s;
-}
-
-td{
-    padding: 60px;
-}
-
-form .label{
-    color: #fff;
-    margin: 0;
 }
 
 form{
@@ -443,7 +564,7 @@ footer .linha_rodape p a{
 
 /* media query -------------------------------------------------------------------------------------------*/
 
-@media screen and (max-width: 1260px){
+@media screen and (max-width: 1440px){
     /* GERAIS */
     .flex{
         flex-direction: column;
@@ -518,39 +639,12 @@ footer .linha_rodape p a{
         justify-content: center;
     }
 
-    /* Formulario */
-
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-    }
-
-    td{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-    }
-
-    form input{
-        width: 25vh;   
-    }
-
-    form textarea{
-        width: 22vh;
-    }
-
-    section.formulario input{
-        margin: 10px;
-    }
-
     /* Rodape */
 
     footer .linha_rodape p{
         text-align: center;
     }
+
 
     /* ESTILO MENU MOBiLE */
 
