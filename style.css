@@ -639,6 +639,34 @@ footer .linha_rodape p a{
         justify-content: center;
     }
 
+    /* FORM */
+
+    form input{
+        background-color: #242424;
+        border: 0;
+        border-radius: 10px;
+        width: 30vh;
+        color: #fff;
+        font-size: 18px;
+        padding: 18px ;
+        margin: 30px 0;
+        outline: none;
+    }
+    
+    form textarea{
+        background-color: #242424;
+        border: 0;
+        border-radius: 10px;
+        width: 30vh;
+        height: 90px;
+        color: #fff;
+        font-size: 18px;
+        padding: 18px ;
+        margin: 30px 0;
+        resize: vertical;
+        outline: none;
+    }
+
     /* Rodape */
 
     footer .linha_rodape p{
