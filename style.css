@@ -15,8 +15,6 @@ body{
 .interface{
         max-width: 1280px;
         margin: 0 auto;
-        
-
 }
 
 .flex{
@@ -45,13 +43,22 @@ body{
     transform: scale(0.8);
 }
 
-h2.titulo{
+h2{
     color: #fff;
     font-size: 38px;
     text-align: center;
 }
 
-h2.titulo span{
+h2 span{
+    color: #03AB00;
+}
+
+h3{
+    color: #fff;
+    text-align: center;
+}
+
+h3 span{
     color: #03AB00;
 }
 
