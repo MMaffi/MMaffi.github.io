@@ -564,7 +564,7 @@ footer .linha_rodape p a{
 
 /* media query -------------------------------------------------------------------------------------------*/
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 940px){
     /* GERAIS */
     .flex{
         flex-direction: column;
@@ -572,6 +572,15 @@ footer .linha_rodape p a{
 
     .topo_site .flex{
         flex-direction: column-reverse;
+    }
+
+    .topo_site .imagem_topo_site img{
+        position: relative;
+        animation: perfil_flutuante 2s ease-in-out infinite alternate;
+        box-shadow: 10px 10px 10px #04ff00;
+        border-radius: 1000px;
+        width: 200px;
+        height: 200px;
     }
 
     .sobre .flex{
