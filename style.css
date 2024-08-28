@@ -141,7 +141,7 @@ header nav.menu_desktop ul li{
     padding: 0 60px;
 }
 
-/* .configuracoes {
+/* .configuracoes {  -------------------  EM BREVE  -------------------
     width: 300px;
     height: 350px;
     border-radius: 10%;
@@ -152,7 +152,7 @@ header nav.menu_desktop ul li{
     transform: translate(-50%, -50%);
 } */
 
-/* Estilo Modo Light TERMINARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+/* Estilo Modo Light */
 
 /* .darkmode {
     display: flex;
@@ -387,8 +387,7 @@ section.parcerias .flex {
     
 }
 
-/* Parceiro 2 EM BREVE ------------------------------------------------------------------------------*/
-/* .parceiro2 {
+.parceiro2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -399,6 +398,10 @@ section.parcerias .flex {
     position: relative;
     width: 150px;
     height: 40px;
+}
+
+.parceiro2 img {
+    border-radius: 50%;
 }
 
 .parceiro2 a {
@@ -429,7 +432,7 @@ section.parcerias .flex {
     visibility: visible;
     transition: 0.5s;
     
-} */
+}
 
 /* Estilo Formulario -------------------------------------------------------------------------------------*/
 

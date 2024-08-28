@@ -1,4 +1,5 @@
 // Comando para deixar as Box 3d ------------------------------------------------- 
+
 VanillaTilt.init(document.querySelectorAll(".especialidades_box"), {
     max: 25,
     speed: 400,
@@ -59,7 +60,7 @@ botaorefresh.addEventListener('click', () => {
     location.reload()
 })
 
-// MODO DARK / LIGHT ------------------------TERMINARRRRRRRRRRRRRRRRRRR--------------------------
+// MODO DARK / LIGHT -------------------------------------------  EM BREVE  ---------------------------------------------
 
 // let dark = document.getElementById('darkmode')
 // let light = document.getElementById('lightmode')
