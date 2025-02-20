@@ -328,6 +328,22 @@ section.sobre .flex{
     text-align: justify;
 }
 
+.sobre .texto_sobre a {
+    color: #03ab00;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    font-size: 17px;
+}
+
+.sobre .texto_sobre a:hover {
+    color: #03AB00;
+    text-decoration: underline;
+}
+
+.sobre .texto_sobre a:visited {
+    color: #03ab00;
+}
+
 /* Estilo Parcerias ------------------------------------------------------------------------------------ */
 
 section.parcerias {
