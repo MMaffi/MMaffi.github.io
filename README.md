@@ -21,7 +21,7 @@ Se desejar mais detalhes específicos sobre minhas competências, convido-o(a) a
 
 Se você tiver interesse em colaborar em projetos, discutir novas ideias ou quiser saber mais sobre o meu trabalho, fique à vontade para entrar em contato comigo.
 
-- **E-mail:** mm.maffi@outlook.com
+- **E-mail:** mmaffi.dev@outlook.com
 - **LinkedIn:** https://www.linkedin.com/in/mateus-maffi
 - **GitHub:** https://github.com/MMaffi
 - **Portfólio Online:** https://mmaffi.github.io
