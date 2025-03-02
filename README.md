@@ -3,6 +3,8 @@
 Bem-vindo ao meu portifólio! <br>
 Aqui você encontrará uma seleção dos meus projetos e experiências, bem como as habilidades que desenvolvi ao longo da minha trajetória profissional.
 
+---
+
 ## Sobre Mim
 
 Cultivo uma paixão inabalável pela fusão entre música e tecnologia. Iniciei minha jornada na programação aos 16 anos, imerso em uma variedade de cursos online que me proporcionaram uma base sólida nesse vasto campo do conhecimento. <br>
@@ -10,12 +12,18 @@ A música tem sido uma constante em minha vida desde os seis anos de idade, quan
 Desde os primórdios, meu interesse intrínseco pelas possibilidades que o mundo digital oferece tem sido uma força motriz em minha jornada. Sempre ávido por explorar e desvendar novas fronteiras tecnológicas. Em constante aprimoramento e imersão, busco incessantemente expandir meu domínio nessas disciplinas, almejando contribuir significativamente para os avanços futuros nesse campo tão dinâmico e promissor. <br>
 Se desejar mais detalhes específicos sobre minhas competências, convido-o(a) a explorar a seção correspondente em meu site profissional.
 
+---
+
 ## Habilidades
 
-- **Linguagens de Programação:** JavaScript, Python, PHP
-- **Tecnologias:** React, NodeJS, MySQL, HTML, CSS
-- **Ferramentas:** Git, Sublime Text, Vs Code, MySQL Workbench
+- **Linguagens de Programação:** JavaScript, TypeScript Python, C, R, XML, JSON, MySQL
+- **Frameworks:** Vue, React, Django
+- **Bibliotecas** jQuery
+- **Ferramentas:** Git, NPM, MongoDB, NodeJS, Jupyter
+- **Software** Windows, Linux, VsCode
 - **Outras habilidades:** Multi-Instrumentista
+
+---
 
 ## Contato
 
@@ -23,6 +31,7 @@ Se você tiver interesse em colaborar em projetos, discutir novas ideias ou quis
 
 - **E-mail:** mmaffi.dev@outlook.com
 - **LinkedIn:** https://www.linkedin.com/in/mateus-maffi
+- **Kaggle** https://www.kaggle.com/mmaffi
 - **GitHub:** https://github.com/MMaffi
 - **Portfólio Online:** https://mmaffi.github.io
 
