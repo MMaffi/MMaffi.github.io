@@ -12,6 +12,26 @@ body{
     height: 100vh;
 }
 
+/* Largura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Cor de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #242424;
+}
+
+/* Cor do "thumb" */
+::-webkit-scrollbar-thumb {
+    background: #03AB00;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #04ff00;
+}
+
 .interface{
         max-width: 1280px;
         margin: 0 auto;
