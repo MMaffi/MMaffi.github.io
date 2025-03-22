@@ -161,50 +161,6 @@ header nav.menu_desktop ul li{
     padding: 0 60px;
 }
 
-/* .configuracoes {  -------------------  EM BREVE  -------------------
-    width: 300px;
-    height: 350px;
-    border-radius: 10%;
-    position: absolute;
-    background-color: #242424;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
-
-/* Estilo Modo Light */
-
-/* .darkmode {
-    display: flex;
-    position: absolute;
-    padding-top: 20px;
-    padding-right: 20px;
-    justify-content: right;
-    cursor: pointer;
-    color: #fff;
-    font-size: 25px;
-}
-
-.lightmode {
-    display: flex;
-    position: absolute;
-    padding-top: 20px;
-    padding-right: 20px;
-    justify-content: right;
-    cursor: pointer;
-    color: #fff;
-    font-size: 25px;
-    visibility: hidden;
-}
-
-.darkmode.light {
-    visibility: hidden;
-}
-
-.lightmode.light {
-    visibility: visible;
-} */
-
 /* Estilo menu_mobile */
 
 .menu_mobile {
@@ -219,7 +175,6 @@ header nav.menu_desktop ul li{
 .overlay_menu {
     display: none;
 }
-
 
 /* Estilo topo site --------------------------------------------------------------------------------------*/
 
