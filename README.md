@@ -1,42 +1,42 @@
-# Portifólio de MMaffi
+# MMaffi's Portfolio
 
-Bem-vindo ao meu portifólio! <br>
-Aqui você encontrará uma seleção dos meus projetos e experiências, bem como as habilidades que desenvolvi ao longo da minha trajetória profissional.
-
----
-
-## Sobre Mim
-
-Cultivo uma paixão inabalável pela fusão entre música e tecnologia. Iniciei minha jornada na programação aos 16 anos, imerso em uma variedade de cursos online que me proporcionaram uma base sólida nesse vasto campo do conhecimento. <br>
-A música tem sido uma constante em minha vida desde os seis anos de idade, quando mergulhei nas notas e ritmos que compõem a linguagem universal da arte sonora. Essa afinidade culminou em dois anos dedicados ao ensino musical, onde tive o privilégio de compartilhar meu conhecimento com outros entusiastas. <br>
-Desde os primórdios, meu interesse intrínseco pelas possibilidades que o mundo digital oferece tem sido uma força motriz em minha jornada. Sempre ávido por explorar e desvendar novas fronteiras tecnológicas. Em constante aprimoramento e imersão, busco incessantemente expandir meu domínio nessas disciplinas, almejando contribuir significativamente para os avanços futuros nesse campo tão dinâmico e promissor. <br>
-Se desejar mais detalhes específicos sobre minhas competências, convido-o(a) a explorar a seção correspondente em meu site profissional.
+Welcome to my portfolio! <br>
+Here, you'll find a selection of my projects and experiences, as well as the skills I've developed throughout my professional journey.
 
 ---
 
-## Habilidades
+## About Me
 
-- **Linguagens de Programação:** JavaScript, TypeScript Python, C, R, XML, JSON, MySQL
+I cultivate an unwavering passion for the fusion of music and technology. I started my programming journey at the age of 16, diving into a variety of online courses that provided me with a solid foundation in this vast field of knowledge. <br>
+Music has been a constant in my life since the age of six when I immersed myself in the notes and rhythms that compose the universal language of sound art. This affinity led to two years dedicated to music teaching, where I had the privilege of sharing my knowledge with other enthusiasts. <br>
+From the beginning, my intrinsic interest in the possibilities the digital world offers has been a driving force in my journey. Always eager to explore and uncover new technological frontiers, I am constantly improving and immersing myself in this field, striving to expand my expertise and contribute meaningfully to future advancements in this dynamic and promising area. <br>
+If you'd like more specific details about my skills, I invite you to explore the corresponding section on my professional website.
+
+---
+
+## Skills
+
+- **Programming Languages:** JavaScript, TypeScript, Python, C, R, XML, JSON, MySQL
 - **Frameworks:** Vue, React, Django
-- **Bibliotecas** jQuery
-- **Ferramentas:** Git, NPM, MongoDB, NodeJS, Jupyter
-- **Software** Windows, Linux, VsCode
-- **Outras habilidades:** Multi-Instrumentista
+- **Libraries:** jQuery
+- **Tools:** Git, NPM, MongoDB, NodeJS, Jupyter
+- **Software:** Windows, Linux, VSCode
+- **Other Skills:** Multi-Instrumentalist
 
 ---
 
-## Contato
+## Contact
 
-Se você tiver interesse em colaborar em projetos, discutir novas ideias ou quiser saber mais sobre o meu trabalho, fique à vontade para entrar em contato comigo.
+If you're interested in collaborating on projects, discussing new ideas, or learning more about my work, feel free to reach out.
 
-- **E-mail:** mmaffi.dev@outlook.com
+- **Email:** mmaffi.dev@outlook.com
 - **LinkedIn:** https://www.linkedin.com/in/mateus-maffi
-- **Kaggle** https://www.kaggle.com/mmaffi
+- **Kaggle:** https://www.kaggle.com/mmaffi
 - **GitHub:** https://github.com/MMaffi
-- **Portfólio Online:** https://mmaffi.github.io
+- **Online Portfolio:** https://mmaffi.github.io
 
 ---
 
-Obrigado por visitar meu portifólio! Espero que você tenha gostado do meu trabalho. Vamos conectar!
+Thank you for visiting my portfolio! I hope you enjoyed my work. Let's connect!
 
 # MMaffi.github.io
