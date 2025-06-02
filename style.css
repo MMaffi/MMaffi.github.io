@@ -340,6 +340,7 @@ section.projetos .flex {
     cursor: pointer;
     border-radius: 40px;
     position: relative;
+    border: 2px solid #03AB00;
 }
 
 .img-port:hover {
