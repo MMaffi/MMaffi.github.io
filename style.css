@@ -324,11 +324,16 @@ section.sobre .flex{
 section.projetos {
     padding: 80px 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section.projetos .flex {
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 60px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .img-port {
@@ -336,7 +341,7 @@ section.projetos .flex {
     height: 460px;
     background-size: cover;
     background-position: 100% 0%;
-    transition: 8s;
+    transition: 3s;
     cursor: pointer;
     border-radius: 40px;
     position: relative;
