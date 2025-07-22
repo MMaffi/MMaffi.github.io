@@ -622,6 +622,16 @@ footer .linha_rodape p a{
     
 }
 
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin-bottom: -25px;
+}
+
+footer .copyright p {
+    color: #929292;
+}
+
 /* media query -------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 940px){
