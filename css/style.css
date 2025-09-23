@@ -670,6 +670,47 @@ section {
     line-height: 1.6;
 }
 
+/* Partners Section */
+#partners {
+    padding: 100px 0;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+}
+
+.partner-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+}
+
+.partner-card img {
+    max-width: 120px;
+    max-height: 80px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.3);
+}
+
+.partner-card:hover img {
+    transform: scale(1.1);
+}
+
 /* Contact Section */
 .contact-content {
     display: grid;
@@ -1002,6 +1043,11 @@ footer {
     .services-grid {
         grid-template-columns: 1fr;
     }
+
+    .partners-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 30px;
+    }
     
     .footer-content {
         flex-direction: column;
@@ -1027,6 +1073,11 @@ footer {
     .profile-img {
         width: 250px;
         height: 250px;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 20px;
     }
 }
 
