@@ -165,3 +165,10 @@ const floatingElements = document.querySelectorAll('.floating-element');
 floatingElements.forEach((el, index) => {
     el.style.animationDelay = `${index * 2}s`;
 });
+
+// Current Year
+document.addEventListener('DOMContentLoaded', () => {
+    const yearSpan = document.getElementById('current-year');
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
+});
