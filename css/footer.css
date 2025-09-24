@@ -13,6 +13,11 @@ footer {
     align-items: center;
 }
 
+#footer-logo {
+    cursor: default;
+    user-select: none;
+}
+
 .copyright {
     color: var(--secondary-text);
     font-size: 1rem;
