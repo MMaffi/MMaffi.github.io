@@ -3,11 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Site Title -->
     <title>MMaffi - Portfólio</title>
+
+    <!-- Meta Tags -->
     <meta name="description" content="Portfólio profissional de MMaffi, desenvolvedor Full-Stack especializado em soluções web modernas e inovadoras.">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="keywords" content="WEB, Java Script, FUTURO, NODE, SQL, Python, PHP, FULL-STACK, DEVELOPER, MMaffi, github, github.io" />
+    <meta http-equiv="content-language" content="pt-BR" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="author" content="@MMaffi" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://mmaffi.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MMaffi - Portifólio">
+    <meta property="og:description" content="Portfólio profissional de MMaffi, desenvolvedor Full-Stack especializado em soluções web modernas e inovadoras.">
+    <meta property="og:locale" content="pt-BR" />
+    <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/9ddc00db-9a88-42df-a342-86b0cfccc08f.png?token=YBawf6cK5NRXPwZ58n42Wl1b8BX8E7I7sY0uM-wisI8&height=630&width=1200&expires=33270989846">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="mmaffi.github.io">
+    <meta property="twitter:url" content="https://mmaffi.github.io">
+    <meta name="twitter:title" content="MMaffi - Portifólio">
+    <meta property="og:locale" content="pt-BR" />
+    <meta name="twitter:description" content="Portfólio profissional de MMaffi, desenvolvedor Full-Stack especializado em soluções web modernas e inovadoras.">
+    <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/9ddc00db-9a88-42df-a342-86b0cfccc08f.png?token=YBawf6cK5NRXPwZ58n42Wl1b8BX8E7I7sY0uM-wisI8&height=630&width=1200&expires=33270989846">
+
+    <!-- Site Icon Link -->
     <link rel="shortcut icon" href="./images/MM_logo.png" type="image/x-icon">
+
+    <!-- External Style Links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Style Links -->
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/resetstyle.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/sections.css">
+    <link rel="stylesheet" href="./css/herosection.css">
+    <link rel="stylesheet" href="./css/aboutsection.css">
+    <link rel="stylesheet" href="./css/projectssection.css">
+    <link rel="stylesheet" href="./css/servicessection.css">
+    <link rel="stylesheet" href="./css/partnerssection.css">
+    <link rel="stylesheet" href="./css/contactsection.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/particlebackground.css">
+    <link rel="stylesheet" href="./css/mediaquery.css">
+    <link rel="stylesheet" href="./css/animationsclasses.css">
+    <link rel="stylesheet" href="./css/backtotopbutton.css">
+    <link rel="stylesheet" href="./css/scrollbar.css">
 </head>
 <body class="dark-mode">
     <!-- Particle Background -->
@@ -377,6 +424,12 @@
                         </div>
                         
                         <button type="submit" class="btn">Enviar Mensagem</button>
+
+                        <!-- Tags da API do formulário -->
+                        <input type="hidden" name="_subject" value="NOVO CONTATO!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://mmaffi.github.io">
+                        <input type="text" name="_honey" style="display:none">
                     </form>
                 </div>
             </div>
@@ -399,7 +452,16 @@
         <div class="water-fill"></div>
     </div>
 
+    <!-- External Link Sripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="./javascript/script.js"></script>
+
+    <!-- Link Scripts -->
+    <script src="./javascript/initializeparticles.js"></script>
+    <script src="./javascript/headerscrolleffect.js"></script>
+    <script src="./javascript/themetoggle.js"></script>
+    <script src="./javascript/mobilemenu.js"></script>
+    <script src="./javascript/backtotopbutton.js"></script>
+    <script src="./javascript/animations.js"></script>
+    <script src="./javascript/currentyear.js"></script>
 </body>
 </html>

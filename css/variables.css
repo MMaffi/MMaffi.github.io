@@ -1,0 +1,31 @@
+:root {
+    --primary: #6c63ff;
+    --secondary: #4a44c9;
+    --accent: #00d4ff;
+    --accent-glow: #00d4ff80;
+    --dark-bg: #0a0a0a;
+    --dark-card: #151515;
+    --dark-text: #f5f5f5;
+    --light-bg: #f8f9fa;
+    --light-card: #ffffff;
+    --light-text: #333333;
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --border-radius: 12px;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    --neon-glow: 0 0 15px var(--accent-glow);
+    --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+.dark-mode {
+    --bg-color: var(--dark-bg);
+    --card-bg: var(--dark-card);
+    --text-color: var(--dark-text);
+    --secondary-text: #b0b0b0;
+}
+
+.light-mode {
+    --bg-color: var(--light-bg);
+    --card-bg: var(--light-card);
+    --text-color: var(--light-text);
+    --secondary-text: #666666;
+}

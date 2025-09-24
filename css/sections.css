@@ -1,0 +1,36 @@
+/* Sections */
+section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 3rem;
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: var(--gradient);
+    border-radius: 3px;
+    animation: lineGrow 1.5s ease;
+}
+
+@keyframes lineGrow {
+    from { width: 0; }
+    to { width: 100px; }
+}
