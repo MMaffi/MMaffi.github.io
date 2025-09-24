@@ -4,16 +4,19 @@ let clickCount = 0;
 let clickTimer;
 
 logo.addEventListener("click", () => {
-clickCount++;
+    clickCount++;
 
-// Reset count if 2s pass without click
-clearTimeout(clickTimer);
+    clearTimeout(clickTimer);
     clickTimer = setTimeout(() => {
         clickCount = 0;
     }, 2000);
 
-    // When you reach 5 clicks
     if (clickCount === 5) {
-        window.location.href = "https://mmaffi.github.io/OLD_PORTFOLIO/index.html"; 
+        const animation = document.getElementById("easter-egg-animation");
+        animation.classList.remove("hidden");
+
+        setTimeout(() => {
+            window.location.href = "https://mmaffi.github.io/OLD_PORTFOLIO/index.html";
+        }, 6000);
     }
 });

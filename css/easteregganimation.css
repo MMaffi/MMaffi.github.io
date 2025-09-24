@@ -1,0 +1,39 @@
+#easter-egg-animation {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, #000 60%, #1a1a40);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+#easter-egg-animation.hidden {
+    display: none;
+}
+
+.rocket {
+    font-size: 4rem;
+    animation: fly 3s ease-in forwards;
+    position: relative;
+}
+
+.planet {
+    font-size: 6rem;
+    position: absolute;
+    bottom: -150px;
+    animation: appearPlanet 3s 3s forwards;
+    opacity: 0;
+}
+
+@keyframes fly {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-120vh); }
+}
+
+@keyframes appearPlanet {
+    0%   { bottom: -150px; opacity: 0; }
+    100% { bottom: 20px; opacity: 1; }
+}
