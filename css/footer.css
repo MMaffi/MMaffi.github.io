@@ -1,0 +1,19 @@
+/* Footer */
+footer {
+    background-color: var(--card-bg);
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid rgba(108, 99, 255, 0.1);
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: var(--secondary-text);
+    font-size: 1rem;
+}
