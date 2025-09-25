@@ -86,6 +86,37 @@
     .projects-grid {
         grid-template-columns: 1fr;
     }
+
+    .cta h2 {
+        font-size: 2.2rem;
+    }
+    
+    .cta-tagline {
+        font-size: 1.2rem;
+    }
+    
+    .benefits-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-step:not(:last-child)::after {
+        content: "↓";
+        right: 50%;
+        top: auto;
+        bottom: -30px;
+        transform: translateX(50%);
+    }
+    
+    .btn-email {
+        display: block;
+        margin: 10px auto;
+        width: 90%;
+        max-width: 300px;
+    }
     
     .services-grid {
         grid-template-columns: 1fr;
