@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>404 | Página Não Encontrada</title>
+
+    <!-- Icon Page Link -->
+    <link rel="shortcut icon" href="./images/MM_logo.png" type="image/x-icon">
+
+    <!-- Links CSS -->
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/404style.css">
+    <link rel="stylesheet" href="./css/scrollbar.css">
+</head>
+<body class="dark-mode">
+    <div class="floating-elements">
+        <div class="floating-element" style="width: 100px; height: 100px; top: 10%; left: 5%; animation-delay: 0s;"></div>
+        <div class="floating-element" style="width: 150px; height: 150px; top: 60%; left: 80%; animation-delay: -5s;"></div>
+        <div class="floating-element" style="width: 80px; height: 80px; top: 80%; left: 10%; animation-delay: -10s;"></div>
+        <div class="floating-element" style="width: 120px; height: 120px; top: 20%; left: 70%; animation-delay: -15s;"></div>
+    </div>
+
+    <div class="container">
+        <div class="error-card">
+            <div class="error-illustration">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="var(--primary)" d="M48.7,-65.2C61.8,-56.5,70.4,-40.7,74.2,-23.9C78,-7.1,76.9,10.7,70.6,26.5C64.3,42.3,52.8,56.1,38.2,64.5C23.6,72.9,5.9,75.9,-9.5,72.8C-24.9,69.7,-37.9,60.5,-49.2,48.7C-60.5,36.9,-70,22.5,-72.3,6.5C-74.6,-9.5,-69.7,-27.1,-60.2,-40.7C-50.7,-54.3,-36.6,-63.9,-21.4,-71.1C-6.2,-78.3,10.1,-83.1,26.5,-80.9C42.9,-78.7,59.3,-69.4,67.1,-55.9C74.9,-42.4,74.1,-24.7,72.9,-8.1C71.7,8.5,70.1,24.1,64.2,37.4C58.3,50.7,48.1,61.7,35.8,68.8C23.5,75.9,9.2,79.1,-4.3,80.4C-17.8,81.7,-35.6,81.1,-48.3,72.5C-61,63.9,-68.6,47.3,-73.7,30.4C-78.8,13.5,-81.4,-3.7,-78.3,-19.6C-75.2,-35.5,-66.4,-50.1,-54.2,-59.7C-42,-69.3,-26.4,-73.9,-9.7,-76.4C7,-78.9,14.1,-79.3,21.2,-78.1C28.3,-76.9,35.5,-74.1,48.7,-65.2Z" transform="translate(100 100)" />
+                </svg>
+            </div>
+            
+            <h1 class="error-code">404</h1>
+            <h2 class="error-title">Página Não Encontrada</h2>
+            <p class="error-description">
+                Desculpe, a página que você está procurando não existe ou foi movida.
+                Verifique o URL e tente novamente.
+            </p>
+            
+            <div class="action-buttons">
+                <a href="/" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Voltar para a Página Inicial
+                </a>
+                <a href="javascript:history.back()" class="btn btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 12H5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Voltar à Página Anterior
+                </a>
+            </div>
+        </div>
+        
+        <p style="color: var(--secondary-text); font-size: 0.9rem;">
+            Se você acredita que isso é um erro, entre em contato com o suporte.
+        </p>
+    </div>
+
+    <!-- Script Links -->
+    <script src="./javascript/themetoggle.js"></script>
+</body>
+</html>
