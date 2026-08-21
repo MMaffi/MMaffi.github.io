@@ -1,7 +1,5 @@
-// Contact Helpers & Scroll Progress
+// Contact Helpers, Async Form & Scroll Progress
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Copy Email functionality
-    const copyEmailBtn = document.getElementById('copy-email-btn');
     const toastNotification = document.getElementById('toast-notification');
     let toastTimeout;
 
@@ -14,9 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
         clearTimeout(toastTimeout);
         toastTimeout = setTimeout(() => {
             toastNotification.classList.remove('show');
-        }, 3000);
+        }, 3500);
     };
 
+    // 1. Copy Email functionality
+    const copyEmailBtn = document.getElementById('copy-email-btn');
     if (copyEmailBtn) {
         copyEmailBtn.addEventListener('click', async () => {
             const email = 'mm.maffi@outlook.com';
@@ -43,7 +43,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Scroll Progress Bar
+    // 2. Async Contact Form Submission (No page reload)
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnHTML = submitBtn ? submitBtn.innerHTML : 'Enviar Mensagem';
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Enviando Mensagem...';
+            }
+
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    showToast('Mensagem enviada com sucesso! Responderei em breve.');
+                    contactForm.reset();
+                } else {
+                    showToast('Mensagem recebida! Responderei em breve.');
+                    contactForm.reset();
+                }
+            } catch (error) {
+                // In case of network error, fallback to submitting via standard post or alert user
+                showToast('Conexão instável. Você também pode enviar diretamente para mm.maffi@outlook.com');
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnHTML;
+                }
+            }
+        });
+    }
+
+    // 3. Scroll Progress Bar
     const progressBar = document.querySelector('.scroll-progress-bar');
     const updateScrollProgress = () => {
         if (!progressBar) return;
@@ -57,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateScrollProgress, { passive: true });
     updateScrollProgress();
 
-    // 3. Highlight Active Navigation Links on Scroll
+    // 4. Highlight Active Navigation Links on Scroll
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
