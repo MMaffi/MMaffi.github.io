@@ -1,149 +1,235 @@
 /* Contact Section */
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.1fr;
     gap: 60px;
+    align-items: start;
 }
 
 .contact-info h3 {
     font-size: 2.2rem;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.contact-info h3 span {
     background: var(--gradient);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
+.contact-info > p {
+    color: var(--secondary-text);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
 .contact-details {
-    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 35px;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
-    transition: var(--transition);
-    padding: 15px;
+    padding: 16px 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
+    transition: var(--transition);
+    gap: 16px;
 }
 
 .contact-item:hover {
-    background: rgba(108, 99, 255, 0.05);
-    transform: translateX(10px);
+    border-color: var(--primary);
+    transform: translateX(6px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.12);
 }
 
 .contact-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--gradient);
-    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
-    color: white;
     font-size: 1.2rem;
-    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+    flex-shrink: 0;
 }
 
+.contact-text h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 2px;
+}
+
+.contact-text p {
+    font-size: 0.88rem;
+    color: var(--secondary-text);
+    margin: 0;
+}
+
+/* Copy Email Button Card */
+.copy-email-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: var(--card-bg);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.copy-email-card:hover {
+    border-color: var(--primary);
+    background: rgba(99, 102, 241, 0.04);
+}
+
+.copy-email-address {
+    font-family: monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary);
+    word-break: break-all;
+}
+
+.btn-copy {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.btn-copy:hover {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
+/* Social Links */
 .social-links {
     display: flex;
-    gap: 20px;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 
 .social-link {
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
     background-color: var(--card-bg);
-    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--text-color);
+    font-size: 1.15rem;
     transition: var(--transition);
-    box-shadow: var(--box-shadow);
-    position: relative;
-    overflow: hidden;
-}
-
-.social-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient);
-    transition: left 0.5s ease;
-    z-index: -1;
-}
-
-.social-link:hover::before {
-    left: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .social-link:hover {
-    color: white;
-    transform: translateY(-5px) scale(1.1);
+    color: #ffffff;
+    background: var(--gradient);
+    border-color: transparent;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
 }
 
+/* Contact Form */
 .contact-form {
     background-color: var(--card-bg);
-    padding: 40px;
+    border: 1px solid var(--border-color);
+    padding: 35px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     position: relative;
-    overflow: hidden;
-}
-
-.contact-form::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background: var(--gradient);
-    transition: width 0.5s ease;
-}
-
-.contact-form:hover::before {
-    width: 100%;
-    opacity: 0.05;
 }
 
 .form-group {
-    margin-bottom: 25px;
-    position: relative;
+    margin-bottom: 20px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-weight: 600;
-    color: var(--primary);
+    font-size: 0.9rem;
+    color: var(--text-color);
 }
 
 .form-control {
     width: 100%;
-    padding: 15px 20px;
+    padding: 13px 18px;
     background-color: var(--bg-color);
-    border: 2px solid rgba(108, 99, 255, 0.2);
-    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
     color: var(--text-color);
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: var(--transition);
 }
 
 .form-control:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
-    transform: translateY(-2px);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
 }
 
 textarea.form-control {
     resize: vertical;
-    min-height: 150px;
+    min-height: 130px;
+}
+
+/* Toast Notification */
+.toast-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 14px 22px;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10000;
+    transform: translateY(100px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+.toast-notification.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.toast-notification i {
+    color: var(--success);
+    font-size: 1.2rem;
 }

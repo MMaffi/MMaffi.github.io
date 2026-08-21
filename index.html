@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Site Title -->
-    <title>MMaffi - Portfólio</title>
+    <title>MMaffi - Portfólio Profissional</title>
 
     <!-- Meta Tags -->
-    <meta name="description" content="Portfólio profissional de MMaffi, desenvolvedor Full-Stack especializado em soluções web modernas e inovadoras.">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <meta name="keywords" content="WEB, Java Script, FUTURO, NODE, SQL, Python, PHP, FULL-STACK, DEVELOPER, MMaffi, github, github.io" />
-    <meta http-equiv="content-language" content="pt-BR" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="author" content="@MMaffi" />
+    <meta name="description"
+        content="Portfólio profissional de Mateus Maffi (MMaffi), desenvolvedor Full-Stack especializado em aplicações web, sistemas desktop e automações modernas.">
+    <meta name="keywords"
+        content="Desenvolvedor Full-Stack, Web, JavaScript, TypeScript, React, Node.js, Python, SQL, PostgreSQL, Firebird, MMaffi, Portfólio, Desktop" />
+    <meta name="author" content="Mateus Maffi (@MMaffi)" />
+    <meta name="theme-color" content="#090a10" />
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://mmaffi.github.io">
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="MMaffi - Portifólio">
-    <meta property="og:description" content="Portfólio profissional de MMaffi, desenvolvedor Full-Stack especializado em soluções web modernas e inovadoras.">
+    <meta property="og:url" content="https://mmaffi.github.io">
+    <meta property="og:title" content="MMaffi - Desenvolvedor Full-Stack">
+    <meta property="og:description"
+        content="Portfólio profissional de Mateus Maffi (MMaffi), desenvolvedor Full-Stack especializado em soluções digitais inovadoras.">
     <meta property="og:locale" content="pt-BR" />
-    <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/9ddc00db-9a88-42df-a342-86b0cfccc08f.png?token=YBawf6cK5NRXPwZ58n42Wl1b8BX8E7I7sY0uM-wisI8&height=630&width=1200&expires=33270989846">
+    <meta property="og:image"
+        content="https://opengraph.b-cdn.net/production/images/9ddc00db-9a88-42df-a342-86b0cfccc08f.png?token=YBawf6cK5NRXPwZ58n42Wl1b8BX8E7I7sY0uM-wisI8&height=630&width=1200&expires=33270989846">
 
-    <!-- Twitter Meta Tags -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="mmaffi.github.io">
     <meta property="twitter:url" content="https://mmaffi.github.io">
-    <meta name="twitter:title" content="MMaffi - Portifólio">
-    <meta property="og:locale" content="pt-BR" />
-    <meta name="twitter:description" content="Portfólio profissional de MMaffi, desenvolvedor Full-Stack especializado em soluções web modernas e inovadoras.">
-    <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/9ddc00db-9a88-42df-a342-86b0cfccc08f.png?token=YBawf6cK5NRXPwZ58n42Wl1b8BX8E7I7sY0uM-wisI8&height=630&width=1200&expires=33270989846">
+    <meta name="twitter:title" content="MMaffi - Desenvolvedor Full-Stack">
+    <meta name="twitter:description"
+        content="Portfólio profissional de Mateus Maffi (MMaffi), desenvolvedor Full-Stack especializado em soluções digitais inovadoras.">
+    <meta name="twitter:image"
+        content="https://opengraph.b-cdn.net/production/images/9ddc00db-9a88-42df-a342-86b0cfccc08f.png?token=YBawf6cK5NRXPwZ58n42Wl1b8BX8E7I7sY0uM-wisI8&height=630&width=1200&expires=33270989846">
 
-    <!-- Site Icon Link -->
+    <!-- Site Favicon -->
     <link rel="shortcut icon" href="./images/MM_logo.png" type="image/x-icon">
 
-    <!-- External Style Links -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Style Links -->
+
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/resetstyle.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -58,19 +69,23 @@
     <link rel="stylesheet" href="./css/scrollbar.css">
     <link rel="stylesheet" href="./css/easteregganimation.css">
 </head>
+
 <body class="dark-mode">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-bar"></div>
+
     <!-- Particle Background -->
     <div id="particles-js" class="particles-js"></div>
-    
+
     <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">MMaffi<span>!</span></a>
-            
-            <button class="mobile-menu-btn">
+            <a href="index.html" class="logo">MMaffi<span>.</span></a>
+
+            <button class="mobile-menu-btn" aria-label="Abrir Menu Mobile">
                 <i class="fas fa-bars"></i>
             </button>
-            
+
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#about">Sobre Mim</a></li>
@@ -79,12 +94,13 @@
                 <li><a href="#services">Especialidades</a></li>
                 <li><a href="#contact">Contato</a></li>
                 <li>
-                    <button class="theme-toggle mobile-toggle"><i class="fas fa-moon"></i></button>
+                    <button class="theme-toggle mobile-toggle" aria-label="Alternar Tema"><i
+                            class="fas fa-moon"></i></button>
                 </li>
             </ul>
-            
+
             <div class="controls">
-                <button class="theme-toggle">
+                <button class="theme-toggle" aria-label="Alternar Tema">
                     <i class="fas fa-moon"></i>
                 </button>
             </div>
@@ -94,19 +110,33 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="floating-elements">
-            <div class="floating-element" style="width: 50px; height: 50px; top: 20%; left: 10%; animation-delay: 0s;"></div>
-            <div class="floating-element" style="width: 30px; height: 30px; top: 60%; left: 80%; animation-delay: 1s;"></div>
-            <div class="floating-element" style="width: 70px; height: 70px; top: 40%; left: 70%; animation-delay: 2s;"></div>
-            <div class="floating-element" style="width: 40px; height: 40px; top: 80%; left: 20%; animation-delay: 3s;"></div>
+            <div class="floating-element" style="width: 60px; height: 60px; top: 20%; left: 8%; animation-delay: 0s;">
+            </div>
+            <div class="floating-element" style="width: 40px; height: 40px; top: 65%; left: 85%; animation-delay: 2s;">
+            </div>
+            <div class="floating-element" style="width: 80px; height: 80px; top: 35%; left: 75%; animation-delay: 4s;">
+            </div>
+            <div class="floating-element" style="width: 50px; height: 50px; top: 80%; left: 15%; animation-delay: 6s;">
+            </div>
         </div>
-        
+
         <div class="container">
             <div class="hero-content">
-                <h1>Desenvolvedor <span>Full-Stack</span> Criando Soluções Digitais Inovadoras</h1>
-                <p>Especializado em desenvolvimento web moderno, criando experiências digitais excepcionais com as mais recentes tecnologias.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn">Ver Projetos</a>
-                    <a href="#contact" class="btn btn-outline">Entrar em Contato</a>
+                <div class="status-badge fade-in">
+                    <span class="status-dot"></span>
+                    <span>Disponível para novos projetos & oportunidades</span>
+                </div>
+                <h1 class="fade-in">Desenvolvedor <span class="highlight-text">Full-Stack</span> Criando Soluções
+                    Digitais Inovadoras</h1>
+                <p class="fade-in">Especializado em desenvolvimento web moderno, aplicações desktop e automações de alta
+                    performance. Transformando ideias complexas em software elegante e funcional.</p>
+                <div class="hero-buttons fade-in">
+                    <a href="#projects" class="btn">
+                        <i class="fas fa-code"></i> Ver Projetos
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Entrar em Contato
+                    </a>
                 </div>
             </div>
         </div>
@@ -118,41 +148,96 @@
             <div class="section-title fade-in">
                 <h2>Sobre Mim</h2>
             </div>
-            
+
             <div class="about-content">
                 <div class="about-text fade-in">
-                    <h3>Olá, eu sou MMaffi</h3>
-                    <p>Cultivo uma paixão pela união entre música e tecnologia. Iniciei minha jornada na programação aos 16 anos, através de diversos cursos online que me deram uma base sólida.</p>
-                    <p>A música me acompanha desde os seis anos de idade e, além de tocar, tive a oportunidade de ensinar por dois anos, compartilhando essa arte com outras pessoas.</p>
-                    <p>Sempre motivado pelas possibilidades do mundo digital, busco constantemente evoluir, explorar novas fronteiras tecnológicas e contribuir de forma significativa para esse campo dinâmico.</p>
-                    <p>Atualmente, curso <strong>Sistemas de Informação</strong> pela <strong>UFMS – Campus Três Lagoas</strong>, fortalecendo minha formação acadêmica na área de tecnologia.</p>
-                    
-                    <div class="skills">
-                        <span class="skill">JavaScript</span>
-                        <span class="skill">TypeScript</span>
-                        <span class="skill">React</span>
-                        <span class="skill">Node.js</span>
-                        <span class="skill">Python</span>
-                        <span class="skill">SQL</span>
-                        <span class="skill">MongoDB</span>
-                        <span class="skill">PostgreSQL</span>
-                        <span class="skill">C</span>
-                        <span class="skill">PHP</span>
+                    <h3>Olá, eu sou <span>Mateus Maffi</span></h3>
+                    <p>Cultivo uma profunda paixão pela interseção entre tecnologia, resolução de problemas e música.
+                        Iniciei minha jornada na programação aos 16 anos, desenvolvendo desde scripts e automações até
+                        arquiteturas completas de aplicações full-stack.</p>
+                    <p>A música me acompanha desde os seis anos de idade, desenvolvendo minha disciplina, criatividade e
+                        capacidade de ensinar. Atualmente curso <strong>Sistemas de Informação</strong> pela
+                        <strong>UFMS – Campus Três Lagoas</strong>, consolidando minha formação acadêmica.</p>
+
+                    <!-- Quick Highlights -->
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h4>Sistemas de Informação</h4>
+                                <p>UFMS Três Lagoas</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h4>Full-Stack Developer</h4>
+                                <p>Web, APIs, GUI e Scripts</p>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+
+                    <!-- Grouped Skills -->
+                    <div class="skills-container">
+                        <div class="skills-group">
+                            <div class="skills-group-title">
+                                <i class="fas fa-laptop-code"></i> Frontend & Mobile
+                            </div>
+                            <div class="skills-list">
+                                <span class="skill-tag"><i class="fab fa-js-square"></i> JavaScript</span>
+                                <span class="skill-tag"><i class="fab fa-react"></i> React</span>
+                                <span class="skill-tag"><i class="fas fa-code"></i> TypeScript</span>
+                                <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                                <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-group">
+                            <div class="skills-group-title">
+                                <i class="fas fa-server"></i> Backend & Automações
+                            </div>
+                            <div class="skills-list">
+                                <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                                <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                                <span class="skill-tag"><i class="fab fa-php"></i> PHP</span>
+                                <span class="skill-tag"><i class="fas fa-terminal"></i> C</span>
+                                <span class="skill-tag"><i class="fas fa-bolt"></i> Shell / Batch</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-group">
+                            <div class="skills-group-title">
+                                <i class="fas fa-database"></i> Banco de Dados & Ferramentas
+                            </div>
+                            <div class="skills-list">
+                                <span class="skill-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+                                <span class="skill-tag"><i class="fas fa-fire"></i> Firebird</span>
+                                <span class="skill-tag"><i class="fas fa-leaf"></i> MongoDB</span>
+                                <span class="skill-tag"><i class="fas fa-table"></i> SQL</span>
+                                <span class="skill-tag"><i class="fab fa-git-alt"></i> Git & GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Curriculum Downloads -->
+                    <div class="about-actions">
                         <a href="./public/MMaffi Currículo Versão PT-BR.pdf" class="btn" download>
-                            <i class="fas fa-download"></i> Baixar Currículo PT
+                            <i class="fas fa-file-download"></i> Currículo (PT-BR)
                         </a>
                         <a href="./public/MMaffi Currículo Versão EN-US.pdf" class="btn btn-outline" download>
-                            <i class="fas fa-download"></i> Baixar Currículo EN
+                            <i class="fas fa-file-download"></i> Resume (EN-US)
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="about-image fade-in">
-                    <div class="profile-img-container">
-                        <img src="./images/Foto-Mateus.png" alt="Foto de perfil" class="profile-img">
+                    <div class="profile-img-wrapper">
+                        <img src="./images/Foto-Mateus.png" alt="Foto de Mateus Maffi" class="profile-img"
+                            loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -165,166 +250,211 @@
             <div class="section-title fade-in">
                 <h2>Meus Projetos</h2>
             </div>
-            
+
+            <!-- Category Filter Tabs -->
+            <div class="project-tabs-container fade-in">
+                <div class="project-tabs" role="tablist">
+                    <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">
+                        <i class="fas fa-layer-group"></i> Todos <span class="tab-count">0</span>
+                    </button>
+                    <button class="tab-btn" data-filter="web" role="tab" aria-selected="false">
+                        <i class="fas fa-globe"></i> Aplicações Web <span class="tab-count">0</span>
+                    </button>
+                    <button class="tab-btn" data-filter="desktop" role="tab" aria-selected="false">
+                        <i class="fas fa-desktop"></i> Aplicações Desktop <span class="tab-count">0</span>
+                    </button>
+                    <button class="tab-btn" data-filter="scripts" role="tab" aria-selected="false">
+                        <i class="fas fa-terminal"></i> Scripts & Automações <span class="tab-count">0</span>
+                    </button>
+                </div>
+            </div>
+
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card fade-in">
+                <!-- Project 1 (Web) -->
+                <div class="project-card fade-in" data-category="web">
                     <div class="project-image">
-                        <img src="./images/projeto_cfopfinder.webp" alt="Projeto 1">
+                        <span class="project-category-badge"><i class="fas fa-globe"></i> Aplicação Web</span>
+                        <img src="./images/projeto_cfopfinder.webp" alt="CFOP Finder" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>CFOP Finder</h3>
-                        <p>Site para consultas de CFOP (Código Fiscal de Operações e Prestações)</p>
+                        <p>Plataforma intuitiva e veloz para consultas tributárias de CFOP (Código Fiscal de Operações e
+                            Prestações).</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Html</span>
-                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">JSON</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/MMaffi/CFOPFinder" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Código
+                            <a href="https://mmaffi.github.io/CFOPFinder" target="_blank" rel="noopener noreferrer"
+                                class="project-link project-link-primary">
+                                <i class="fas fa-external-link-alt"></i> Ver Demo
                             </a>
-                            <a href="https://mmaffi.github.io/CFOPFinder" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
+                            <a href="https://github.com/MMaffi/CFOPFinder" target="_blank" rel="noopener noreferrer"
+                                class="project-link project-link-secondary">
+                                <i class="fab fa-github"></i> Código
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project-card fade-in">
+                <!-- Project 2 (Web) -->
+                <div class="project-card fade-in" data-category="web">
                     <div class="project-image">
-                        <img src="./images/projeto_ncmfinder.webp" alt="Projeto 2">
+                        <span class="project-category-badge"><i class="fas fa-globe"></i> Aplicação Web</span>
+                        <img src="./images/projeto_ncmfinder.webp" alt="NCM Finder" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>NCM Finder</h3>
-                        <p>Site para consultas de NCM (Nomenclatura Comum do Mercosul)</p>
+                        <p>Sistema otimizado para consultas e localização rápida de códigos NCM (Nomenclatura Comum do
+                            Mercosul).</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Html</span>
-                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">JSON</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/MMaffi/NCMFinder" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Código
+                            <a href="https://mmaffi.github.io/NCMFinder" target="_blank" rel="noopener noreferrer"
+                                class="project-link project-link-primary">
+                                <i class="fas fa-external-link-alt"></i> Ver Demo
                             </a>
-                            <a href="https://mmaffi.github.io/NCMFinder" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
+                            <a href="https://github.com/MMaffi/NCMFinder" target="_blank" rel="noopener noreferrer"
+                                class="project-link project-link-secondary">
+                                <i class="fab fa-github"></i> Código
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card fade-in">
+                <!-- Project 3 (Web) -->
+                <div class="project-card fade-in" data-category="web">
                     <div class="project-image">
-                        <img src="./images/projeto_cstfinder.webp" alt="Projeto 3">
+                        <span class="project-category-badge"><i class="fas fa-globe"></i> Aplicação Web</span>
+                        <img src="./images/projeto_cstfinder.webp" alt="CST Finder" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>CST Finder</h3>
-                        <p>Site para consultas de CST (Código de Situação Tributária)</p>
+                        <p>Ferramenta moderna voltada para consultas ágeis de CST (Código de Situação Tributária) com
+                            busca dinâmica.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Html</span>
-                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">JSON</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/MMaffi/CSTFinder" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Código
+                            <a href="https://mmaffi.github.io/CSTFinder" target="_blank" rel="noopener noreferrer"
+                                class="project-link project-link-primary">
+                                <i class="fas fa-external-link-alt"></i> Ver Demo
                             </a>
-                            <a href="https://mmaffi.github.io/CSTFinder" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
+                            <a href="https://github.com/MMaffi/CSTFinder" target="_blank" rel="noopener noreferrer"
+                                class="project-link project-link-secondary">
+                                <i class="fab fa-github"></i> Código
                             </a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project 4 -->
-                <div class="project-card fade-in">
+
+                <!-- Project 4 (Web) -->
+                <div class="project-card fade-in" data-category="web">
                     <div class="project-image">
-                        <img src="./images/projeto_musicgallery.webp" alt="Projeto 4">
+                        <span class="project-category-badge"><i class="fas fa-globe"></i> Aplicação Web</span>
+                        <img src="./images/projeto_musicgallery.webp" alt="Music Gallery" loading="lazy"
+                            decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>Music Gallery</h3>
-                        <p>Web App de covers musicais onde encontrarão vários estilos musicais</p>
+                        <p>Web App full-stack interativo de covers musicais categorizados, integrado com YouTube API e
+                            banco de dados.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Node.js</span>
                             <span class="tech-tag">React</span>
-                            <span class="tech-tag">Youtube API</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">YouTube API</span>
                             <span class="tech-tag">PostgreSQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/MMaffi/be-the-hero" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Código
+                            <a href="https://musicgallery.vercel.app" target="_blank" rel="noopener noreferrer"
+                                class="project-link project-link-primary">
+                                <i class="fas fa-external-link-alt"></i> Ver Demo
                             </a>
-                            <a href="https://musicgallery.vercel.app" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <img src="./images/projeto_chocoinstall.webp" alt="Projeto 5">
-                    </div>
-                    <div class="project-info">
-                        <h3>Choco Dev Install</h3>
-                        <p>Script automatizado para instalação de ferramentas de desenvolvimento via Chocolatey no windows</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Shell</span>
-                            <span class="tech-tag">Batch</span>
-                            <span class="tech-tag">Chocolatey</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/MMaffi/choco-install-development-script" target="_blank" class="project-link">
+                            <a href="https://github.com/MMaffi/be-the-hero" target="_blank" rel="noopener noreferrer"
+                                class="project-link project-link-secondary">
                                 <i class="fab fa-github"></i> Código
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 6 -->
-                <div class="project-card fade-in">
+                <!-- Project 5 (Desktop) -->
+                <div class="project-card fade-in" data-category="desktop">
                     <div class="project-image">
-                        <img src="./images/projeto_gerenciadorfirebird.webp" alt="Projeto 6">
+                        <span class="project-category-badge"><i class="fas fa-desktop"></i> Aplicação Desktop</span>
+                        <img src="./images/projeto_gerenciadorfirebird.webp" alt="Gerenciador Firebird" loading="lazy"
+                            decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>Gerenciador Firebird</h3>
-                        <p>O Gerenciador Firebird é uma aplicação desenvolvida para facilitar o uso e administração de bancos de dados Firebird.</p>
+                        <p>Software desktop desenvolvido com interface gráfica para facilitar o gerenciamento, backup e
+                            manutenção de bancos Firebird.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TKinter</span>
-                            <span class="tech-tag">Firebird</span>
+                            <span class="tech-tag">Tkinter GUI</span>
+                            <span class="tech-tag">Firebird SQL</span>
                             <span class="tech-tag">JSON</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/MMaffi/gerenciador_firebird" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Código
+                            <a href="https://github.com/MMaffi/gerenciador_firebird/releases/latest/download/GerenciadorFirebird_Installer.exe"
+                                target="_blank" rel="noopener noreferrer" class="project-link project-link-primary">
+                                <i class="fas fa-download"></i> Instalador .exe
                             </a>
-                            <a href="https://github.com/MMaffi/gerenciador_firebird/releases/latest/download/GerenciadorFirebird_Installer.exe" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Instalador
+                            <a href="https://github.com/MMaffi/gerenciador_firebird" target="_blank"
+                                rel="noopener noreferrer" class="project-link project-link-secondary">
+                                <i class="fab fa-github"></i> Código
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
+                <!-- Project 6 (Scripts & Automações) -->
+                <div class="project-card fade-in" data-category="scripts">
+                    <div class="project-image">
+                        <span class="project-category-badge"><i class="fas fa-terminal"></i> Script / Automação</span>
+                        <img src="./images/projeto_chocoinstall.webp" alt="Choco Dev Install" loading="lazy"
+                            decoding="async">
+                    </div>
+                    <div class="project-info">
+                        <h3>Choco Dev Install</h3>
+                        <p>Script automatizado para provisionamento e instalação rápida de ambientes de desenvolvimento
+                            completos via Chocolatey.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Shell Script</span>
+                            <span class="tech-tag">Batch</span>
+                            <span class="tech-tag">Chocolatey</span>
+                            <span class="tech-tag">Windows CLI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MMaffi/choco-install-development-script" target="_blank"
+                                rel="noopener noreferrer" class="project-link project-link-primary">
+                                <i class="fab fa-github"></i> Acessar Repositório
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Call To Action Section -->
+    <!-- Call To Action Section (Serviços) -->
     <section id="cta" class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2 class="fade-in">🚀 Presença Digital Profissional para o Seu Negócio</h2>
+                <h2 class="fade-in">🚀 Presença Digital <span class="cta-gradient">Profissional & de Alto Impacto</span>
+                </h2>
                 <p class="cta-tagline fade-in delay-1">
-                    Crio <span class="cta-highlight">sites modernos, otimizados e responsivos</span> que convertem visitantes em clientes. 
-                    Soluções completas em front-end para empresas que querem se destacar online.
+                    Desenvolvimento de <span class="cta-highlight">sites modernos, responsivos e otimizados</span>
+                    focados em performance, experiência do usuário e conversão.
                 </p>
 
                 <div class="benefits-section">
@@ -333,59 +463,62 @@
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <h3>Mais Visibilidade</h3>
-                        <p>Um site profissional aumenta sua credibilidade e torna seu negócio encontrado por potenciais clientes 24/7.</p>
+                        <p>Um site profissional eleva a autoridade da sua marca e torna seu negócio acessível para
+                            clientes 24 horas por dia.</p>
                     </div>
-                    
+
                     <div class="benefit-card fade-in delay-2">
                         <div class="benefit-icon">
                             <i class="fas fa-mobile-alt"></i>
                         </div>
-                        <h3>Otimizado para Mobile</h3>
-                        <p>Mais de 60% do tráfego vem de dispositivos móveis. Seu site será perfeito em qualquer tela.</p>
+                        <h3>100% Responsivo</h3>
+                        <p>Layouts adaptados para computadores, tablets e smartphones com foco na melhor usabilidade
+                            móvel.</p>
                     </div>
-                    
+
                     <div class="benefit-card fade-in delay-3">
                         <div class="benefit-icon">
                             <i class="fas fa-bolt"></i>
                         </div>
-                        <h3>Carregamento Rápido</h3>
-                        <p>Sites rápidos melhoram a experiência do usuário e o posicionamento no Google.</p>
+                        <h3>Carregamento Ultrarrápido</h3>
+                        <p>Código limpo e otimizado para garantir carregamento instantâneo e melhor posicionamento nos
+                            buscadores.</p>
                     </div>
                 </div>
 
-                <h3 class="fade-in delay-2">📌 Soluções Personalizadas para Diferentes Necessidades</h3>
+                <h3 class="cta-subtitle fade-in delay-2">📌 Soluções Sob Medida para Seu Negócio</h3>
                 <div class="sites-grid">
                     <div class="site-type fade-in delay-1">
-                        <i class="fas fa-code"></i>
-                        <span>Portfólios profissionais</span>
+                        <i class="fas fa-user-tie"></i>
+                        <span>Portfólios Profissionais</span>
                     </div>
                     <div class="site-type fade-in delay-2">
                         <i class="fas fa-building"></i>
-                        <span>Sites institucionais</span>
+                        <span>Sites Institucionais</span>
                     </div>
                     <div class="site-type fade-in delay-3">
                         <i class="fas fa-bullhorn"></i>
-                        <span>Landing pages</span>
+                        <span>Landing Pages de Alta Conversão</span>
                     </div>
                     <div class="site-type fade-in delay-4">
                         <i class="fas fa-shopping-cart"></i>
-                        <span>Páginas de vendas</span>
+                        <span>Páginas de Vendas</span>
                     </div>
                     <div class="site-type fade-in delay-1">
-                        <i class="fas fa-bolt"></i>
-                        <span>Hotsites para campanhas</span>
+                        <i class="fas fa-rocket"></i>
+                        <span>Hotsites para Campanhas</span>
                     </div>
                     <div class="site-type fade-in delay-2">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Páginas para eventos</span>
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Páginas para Eventos</span>
                     </div>
                     <div class="site-type fade-in delay-3">
-                        <i class="fas fa-link"></i>
-                        <span>Microsites personalizados</span>
+                        <i class="fas fa-network-wired"></i>
+                        <span>Microsites & Dashboards</span>
                     </div>
                     <div class="site-type fade-in delay-4">
-                        <i class="fas fa-blog"></i>
-                        <span>Blogs estáticos</span>
+                        <i class="fas fa-newspaper"></i>
+                        <span>Blogs Estáticos Otimizados</span>
                     </div>
                 </div>
 
@@ -394,78 +527,86 @@
                     <div class="process-steps">
                         <div class="process-step">
                             <div class="step-number">1</div>
-                            <div class="step-title">Consulta Inicial</div>
-                            <div class="step-description">Analisamos suas necessidades e objetivos</div>
+                            <div class="step-title">Alinhamento</div>
+                            <div class="step-description">Compreensão detalhada das necessidades, metas e público-alvo.
+                            </div>
                         </div>
                         <div class="process-step">
                             <div class="step-number">2</div>
-                            <div class="step-title">Proposta Personalizada</div>
-                            <div class="step-description">Criamos um plano específico para seu projeto</div>
+                            <div class="step-title">Planejamento</div>
+                            <div class="step-description">Definição de estrutura visual, arquitetura e cronograma ágil.
+                            </div>
                         </div>
                         <div class="process-step">
                             <div class="step-number">3</div>
                             <div class="step-title">Desenvolvimento</div>
-                            <div class="step-description">Implementamos o design e funcionalidades</div>
+                            <div class="step-description">Construção moderna do código, testes e validação contínua.
+                            </div>
                         </div>
                         <div class="process-step">
                             <div class="step-number">4</div>
-                            <div class="step-title">Entrega</div>
-                            <div class="step-description">Seu site pronto com hospedagem gratuita incluída</div>
+                            <div class="step-title">Entrega & Suporte</div>
+                            <div class="step-description">Publicação em produção com hospedagem inclusa e suporte
+                                pós-entrega.</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="cta-footer fade-in delay-4">
-                    <h3>Pronto para Transformar Sua Presença Digital?</h3>
+                    <h3>Pronto para Alavancar sua Presença Digital?</h3>
                     <p>
-                        Vamos criar juntos um site que não apenas impressiona visualmente, mas também 
-                        gera resultados reais para o seu negócio. <br><br>
-                        ✅ Hospedagem gratuita inclusa: <strong>Netlify ou Vercel</strong>.
+                        Vamos criar juntos uma solução digital que não apenas impressiona visualmente, mas também
+                        gera resultados reais e mensuráveis. <br><br>
+                        ✅ Hospedagem gratuita inclusa: <strong>Vercel ou Netlify</strong>.
                     </p>
-                    
-                    <a href="mailto:mmaffi.dev@outlook.com?subject=Quero um site profissional&body=Olá MMaffi, vi seu portfólio e tenho interesse em criar um site." 
-                    class="btn-email">
-                        <i class="fas fa-envelope"></i> Solicitar Orçamento por E-mail
+
+                    <a href="mailto:mm.maffi@outlook.com?subject=Quero%20um%20site%20profissional&body=Ol%C3%A1%20MMaffi%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+                        class="btn-email">
+                        <i class="fas fa-paper-plane"></i> Solicitar Orçamento por E-mail
                     </a>
                     <br>
                     <div class="guarantee-badge">
-                        <i class="fas fa-shield-alt"></i> Sites entregues com qualidade e suporte inicial pós-entrega
+                        <i class="fas fa-shield-alt"></i> Compromisso com código limpo, suporte inicial e máxima
+                        qualidade
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Habilities Section -->
+    <!-- Specialties Section -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-title fade-in">
                 <h2>Especialidades</h2>
             </div>
-            
+
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Desenvolvimento Web</h3>
-                    <p>Criação de sites e aplicações web responsivas, modernas e otimizadas para todos os dispositivos.</p>
+                    <p>Criação de websites, landing pages e aplicações web responsivas, modernas e otimizadas para alta
+                        performance em qualquer dispositivo.</p>
                 </div>
-                
+
                 <div class="service-card fade-in">
                     <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-desktop"></i>
                     </div>
-                    <h3>Desenvolvimento Mobile</h3>
-                    <p>Desenvolvimento de aplicativos móveis nativos e híbridos para iOS e Android.</p>
+                    <h3>Aplicações Desktop</h3>
+                    <p>Desenvolvimento de softwares desktop com interfaces gráficas intuitivas para automação, gestão de
+                        dados e ferramentas utilitárias.</p>
                 </div>
-                
+
                 <div class="service-card fade-in">
                     <div class="service-icon">
-                        <i class="fas fa-database"></i>
+                        <i class="fas fa-server"></i>
                     </div>
                     <h3>Back-end & APIs</h3>
-                    <p>Desenvolvimento de APIs robustas, sistemas de back-end e integração de bancos de dados.</p>
+                    <p>Construção de APIs RESTful robustas, lógica de negócios eficiente, modelagem e integração segura
+                        de bancos de dados.</p>
                 </div>
             </div>
         </div>
@@ -477,66 +618,86 @@
             <div class="section-title fade-in">
                 <h2>Contato</h2>
             </div>
-            
+
             <div class="contact-content">
                 <div class="contact-info fade-in">
-                    <h3>Vamos Trabalhar Juntos</h3>
-                    <p>Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades para fazer parte de sua visão.</p>
-                    
+                    <h3>Vamos Construir Algo <span>Incrível?</span></h3>
+                    <p>Estou à disposição para novos projetos, oportunidades profissionais e parcerias técnicas. Entre
+                        em contato por e-mail ou através do formulário ao lado!</p>
+
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <i class="fas fa-envelope-open-text"></i>
+                                <i class="fas fa-envelope"></i>
                             </div>
-                            <div>
-                                <h4>Fale Comigo!</h4>
-                                <p>Preencha o formulário ao lado para enviar uma mensagem.</p>
+                            <div class="contact-text">
+                                <h4>E-mail Direto</h4>
+                                <p>mm.maffi@outlook.com</p>
                             </div>
                         </div>
                     </div>
-                    
+
+                    <!-- Quick Copy Email Card -->
+                    <div class="copy-email-card">
+                        <span class="copy-email-address">mm.maffi@outlook.com</span>
+                        <button id="copy-email-btn" class="btn-copy" aria-label="Copiar E-mail">
+                            <i class="fas fa-copy"></i> Copiar E-mail
+                        </button>
+                    </div>
+
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/mateus-maffi" target="_blank" class="social-link">
+                        <a href="https://www.linkedin.com/in/mateus-maffi" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://github.com/MMaffi" target="_blank" class="social-link">
+                        <a href="https://github.com/MMaffi" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://www.kaggle.com/mmaffi" class="social-link">
+                        <a href="https://www.kaggle.com/mmaffi" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="Kaggle">
                             <i class="fab fa-kaggle"></i>
                         </a>
-                        <a href="https://www.instagram.com/mateus_maffi" class="social-link">
+                        <a href="https://www.instagram.com/mateus_maffi" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="contact-form fade-in">
-                    <form id="contactForm" action="https://formsubmit.co/mmaffi.dev@outlook.com" method="POST" autocomplete="off">
+                    <form id="contactForm" action="https://formsubmit.co/mm.maffi@outlook.com" method="POST"
+                        autocomplete="off">
                         <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" class="form-control" required>
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Seu nome"
+                                required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <label for="email">Seu E-mail</label>
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="seuemail@exemplo.com" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="subject">Assunto</label>
-                            <input type="text" id="subject" class="form-control" required>
+                            <input type="text" id="subject" name="subject" class="form-control"
+                                placeholder="Ex: Proposta de Projeto / Oportunidade" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message">Mensagem</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                            <textarea id="message" name="message" class="form-control"
+                                placeholder="Descreva brevemente o projeto ou mensagem..." required></textarea>
                         </div>
-                        
-                        <button type="submit" class="btn">Enviar Mensagem</button>
 
-                        <!-- Tags da API do formulário -->
-                        <input type="hidden" name="_subject" value="NOVO CONTATO!">
+                        <button type="submit" class="btn" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="Novo Contato do Portfólio!">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_next" value="https://mmaffi.github.io">
                         <input type="text" name="_honey" style="display:none">
@@ -549,15 +710,21 @@
     <!-- Partners Section -->
     <section id="partners">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title fade-in">
                 <h2>Parceiros</h2>
             </div>
             <div class="partners-grid">
                 <div class="partner-card fade-in">
-                    <a href="https://csfelix.github.io" target="_blank" ><img src="./images/parcerias/Imagem CSFelix.png" alt="CSFelix Logo"></a>
+                    <a href="https://csfelix.github.io" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/parcerias/Imagem CSFelix.png" alt="CSFelix Logo" loading="lazy"
+                            decoding="async">
+                    </a>
                 </div>
                 <div class="partner-card fade-in">
-                    <a href="https://FelipeCremonez.github.io" target="_blank" ><img src="./images/parcerias/Imagem FelipeCremonez.png" style="border-radius: 50%;" alt="Felipecremonez Logo"></a>
+                    <a href="https://FelipeCremonez.github.io" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/parcerias/Imagem FelipeCremonez.png" style="border-radius: 50%;"
+                            alt="Felipecremonez Logo" loading="lazy" decoding="async">
+                    </a>
                 </div>
             </div>
         </div>
@@ -567,28 +734,34 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="logo" id="footer-logo">MMaffi<span>!</span></div>
-                <p class="copyright">© <span id="current-year"></span> MMaffi. Todos os direitos reservados.</p>
+                <div class="logo" id="footer-logo">MMaffi<span>.</span></div>
+                <p class="copyright">© <span id="current-year"></span> Mateus Maffi. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Animation screen (initially hidden) -->
+    <!-- Toast Notification (Copied Email) -->
+    <div id="toast-notification" class="toast-notification">
+        <i class="fas fa-check-circle"></i>
+        <span class="toast-text">E-mail copiado com sucesso!</span>
+    </div>
+
+    <!-- Easter Egg Screen -->
     <div id="easter-egg-animation" class="hidden">
         <div class="rocket">🚀</div>
         <div class="planet">🪐</div>
     </div>
 
     <!-- Advanced Back to Top Button -->
-    <div class="back-to-top">
+    <div class="back-to-top" aria-label="Voltar ao Topo">
         <i class="fas fa-chevron-up"></i>
         <div class="water-fill"></div>
     </div>
 
-    <!-- External Link Sripts -->
+    <!-- External Script Libraries -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-    <!-- Link Scripts -->
+    <!-- Project Scripts -->
     <script src="./javascript/initializeparticles.js"></script>
     <script src="./javascript/headerscrolleffect.js"></script>
     <script src="./javascript/themetoggle.js"></script>
@@ -597,5 +770,8 @@
     <script src="./javascript/animations.js"></script>
     <script src="./javascript/currentyear.js"></script>
     <script src="./javascript/easteregg.js"></script>
+    <script src="./javascript/projectfilter.js"></script>
+    <script src="./javascript/contacthelpers.js"></script>
 </body>
+
 </html>

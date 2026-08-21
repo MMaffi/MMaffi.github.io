@@ -29,7 +29,7 @@ If you'd like more specific details about my skills, I invite you to explore the
 
 If you're interested in collaborating on projects, discussing new ideas, or learning more about my work, feel free to reach out.
 
-- **Email:** mmaffi.dev@outlook.com
+- **Email:** mm.maffi@outlook.com
 - **LinkedIn:** https://www.linkedin.com/in/mateus-maffi
 - **Kaggle:** https://www.kaggle.com/mmaffi
 - **GitHub:** https://github.com/MMaffi

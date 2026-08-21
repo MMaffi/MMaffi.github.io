@@ -1,13 +1,13 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
     .hero h1 {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
 }
 
 @media (max-width: 992px) {
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
     
     .about-content,
@@ -21,8 +21,8 @@
     }
     
     .profile-img {
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
     }
 }
 
@@ -39,8 +39,9 @@
         justify-content: center;
         transition: var(--transition);
         z-index: 1000;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.4);
         padding-top: 80px;
+        gap: 15px;
     }
     
     .nav-links.active {
@@ -48,51 +49,73 @@
     }
     
     .nav-links li {
-        margin: 20px 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 20px;
+        font-size: 1.1rem;
     }
 
     .mobile-toggle {
-        display: block;
+        display: flex;
+        margin-top: 20px;
     }
     
     .mobile-menu-btn {
-        display: block;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1001;
+        display: flex;
     }
 
     .controls {
         display: none;
     }
-
-    .nav-links .theme-toggle {
-        margin-top: 40px;
-    }
     
+    .hero {
+        padding: 120px 0 60px;
+    }
+
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
     
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
     
     .section-title h2 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
     
+    .project-tabs {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .tab-btn {
+        flex: 1 1 calc(50% - 10px);
+        justify-content: center;
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
 
+    .cta {
+        padding: 60px 20px;
+        margin: 40px 0;
+    }
+
     .cta h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .cta-tagline {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     .benefits-section {
@@ -107,15 +130,14 @@
         content: "↓";
         right: 50%;
         top: auto;
-        bottom: -30px;
+        bottom: -25px;
         transform: translateX(50%);
     }
     
     .btn-email {
-        display: block;
-        margin: 10px auto;
-        width: 90%;
-        max-width: 300px;
+        display: inline-flex;
+        width: 100%;
+        max-width: 320px;
     }
     
     .services-grid {
@@ -130,27 +152,57 @@
     .footer-content {
         flex-direction: column;
         gap: 20px;
+        text-align: center;
+    }
+
+    .copy-email-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .btn-copy {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .toast-notification {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        justify-content: center;
     }
 }
 
 @media (max-width: 576px) {
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
-    .btn {
-        display: block;
+    .hero-buttons {
+        flex-direction: column;
         width: 100%;
-        margin-bottom: 15px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
     }
     
-    .btn-outline {
-        margin-left: 0;
+    .about-actions {
+        flex-direction: column;
     }
-    
+
+    .about-actions .btn {
+        width: 100%;
+    }
+
     .profile-img {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
+    }
+
+    .tab-btn {
+        flex: 1 1 100%;
     }
 
     .partners-grid {

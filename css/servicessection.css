@@ -1,12 +1,13 @@
-/* Services Section */
+/* Services / Especialidades Section */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 40px;
+    gap: 30px;
 }
 
 .service-card {
     background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     padding: 40px 30px;
     border-radius: var(--border-radius);
     text-align: center;
@@ -20,42 +21,53 @@
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
-    height: 5px;
+    height: 4px;
     background: var(--gradient);
-    transition: left 0.5s ease;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .service-card:hover::before {
-    left: 0;
+    opacity: 1;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.25);
 }
 
 .service-icon {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     color: var(--primary);
-    margin-bottom: 25px;
-    display: inline-block;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 20px;
     transition: var(--transition);
 }
 
 .service-card:hover .service-icon {
-    transform: scale(1.2) rotate(10deg);
-    color: var(--accent);
+    transform: scale(1.1) rotate(5deg);
+    background: var(--gradient);
+    color: #ffffff;
 }
 
 .service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    font-weight: 600;
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--text-color);
 }
 
 .service-card p {
     color: var(--secondary-text);
     line-height: 1.6;
+    font-size: 0.95rem;
 }
