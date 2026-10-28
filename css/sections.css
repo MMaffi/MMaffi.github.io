@@ -1,36 +1,59 @@
 /* Sections */
 section {
-    padding: 100px 0;
+    padding: 110px 0;
     position: relative;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
     position: relative;
 }
 
-.section-title h2 {
-    font-size: 3rem;
-    display: inline-block;
-    position: relative;
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--primary-light);
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.22);
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 14px;
+}
+
+.light-mode .section-eyebrow {
+    color: var(--primary);
+    background: rgba(99, 102, 241, 0.08);
+}
+
+.section-title h2 {
+    font-size: 2.85rem;
+    display: block;
+    position: relative;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
 }
 
 .section-title h2::after {
     content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 5px;
+    display: block;
+    margin: 16px auto 0;
+    width: 80px;
+    height: 4px;
     background: var(--gradient);
-    border-radius: 3px;
-    animation: lineGrow 1.5s ease;
+    border-radius: 4px;
 }
 
-@keyframes lineGrow {
-    from { width: 0; }
-    to { width: 100px; }
+.section-subtitle {
+    max-width: 640px;
+    margin: 18px auto 0;
+    color: var(--secondary-text);
+    font-size: 1.05rem;
+    line-height: 1.65;
 }

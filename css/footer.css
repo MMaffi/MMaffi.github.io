@@ -1,9 +1,8 @@
 /* Footer */
 footer {
-    background-color: var(--card-bg);
-    padding: 40px 0;
-    text-align: center;
-    border-top: 1px solid rgba(108, 99, 255, 0.1);
+    background-color: var(--bg-alt);
+    padding: 50px 0 35px;
+    border-top: 1px solid var(--border-color);
     position: relative;
 }
 
@@ -11,14 +10,49 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 #footer-logo {
-    cursor: default;
+    cursor: pointer;
     user-select: none;
+}
+
+.footer-tagline {
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.footer-links a {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--secondary-text);
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-light);
+}
+
+.light-mode .footer-links a:hover {
+    color: var(--primary);
 }
 
 .copyright {
     color: var(--secondary-text);
-    font-size: 1rem;
+    font-size: 0.88rem;
 }

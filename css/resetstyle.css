@@ -7,6 +7,9 @@
 html {
     scroll-behavior: smooth;
     color-scheme: dark light;
+    scroll-padding-top: 85px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -14,15 +17,23 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.7;
+    max-width: 100%;
     overflow-x: hidden;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    position: relative;
+    transition: background-color 0.35s ease, color 0.35s ease;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+    background: rgba(99, 102, 241, 0.3);
+    color: #ffffff;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
+    overflow-wrap: break-word;
 }
 
 a {
@@ -34,9 +45,38 @@ button {
     font-family: inherit;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
+}
+
+/* Prevent CSS Grid & Flex children from forcing horizontal page overflow */
+.hero-grid > *,
+.hero-metrics > *,
+.about-content > *,
+.about-highlights > *,
+.projects-grid > *,
+.services-grid > *,
+.benefits-section > *,
+.sites-grid > *,
+.process-steps > *,
+.contact-content > * {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Focus-visible for keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
 }

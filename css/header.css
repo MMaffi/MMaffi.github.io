@@ -8,6 +8,7 @@
     width: 0%;
     z-index: 10001;
     transition: width 0.1s ease-out;
+    box-shadow: 0 0 12px var(--primary-glow);
 }
 
 /* Header & Navigation */
@@ -16,32 +17,34 @@ header {
     top: 0;
     width: 100%;
     background-color: var(--glass-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     z-index: 1000;
-    padding: 18px 0;
+    padding: 16px 0;
     border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 header.scrolled {
-    padding: 12px 0;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    padding: 11px 0;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.28);
+    border-bottom-color: rgba(99, 102, 241, 0.2);
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     font-weight: 800;
     font-family: var(--font-heading);
     color: var(--text-color);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     position: relative;
     letter-spacing: -0.03em;
@@ -57,15 +60,40 @@ header.scrolled {
     font-weight: 900;
 }
 
+.logo-badge {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: rgba(99, 102, 241, 0.12);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    color: var(--primary-light);
+    margin-left: 10px;
+    letter-spacing: 0.02em;
+}
+
+.light-mode .logo-badge {
+    color: var(--primary);
+}
+
 .logo:hover {
-    transform: scale(1.03);
+    transform: translateY(-1px);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    padding: 5px;
+    border-radius: 40px;
+}
+
+.light-mode .nav-links {
+    background: rgba(15, 23, 42, 0.03);
 }
 
 .nav-links li {
@@ -73,14 +101,15 @@ header.scrolled {
 }
 
 .nav-links a {
-    font-weight: 500;
-    font-size: 0.95rem;
+    font-weight: 600;
+    font-size: 0.88rem;
     color: var(--secondary-text);
     padding: 8px 16px;
-    border-radius: 20px;
+    border-radius: 30px;
     transition: var(--transition);
     position: relative;
     display: inline-block;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -89,22 +118,57 @@ header.scrolled {
 }
 
 .nav-links a.active {
-    color: var(--primary);
-    background-color: rgba(99, 102, 241, 0.12);
-    font-weight: 600;
+    color: #ffffff;
+    background: var(--gradient);
+    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
 }
 
 .controls {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+}
+
+.header-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    background: rgba(99, 102, 241, 0.12);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.header-cta-btn i {
+    color: var(--primary-light);
+    font-size: 0.85rem;
+}
+
+.light-mode .header-cta-btn i {
+    color: var(--primary);
+}
+
+.header-cta-btn:hover {
+    background: var(--gradient);
+    border-color: transparent;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+}
+
+.header-cta-btn:hover i {
+    color: #ffffff;
 }
 
 .theme-toggle {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     color: var(--text-color);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     cursor: pointer;
     width: 40px;
     height: 40px;
@@ -132,10 +196,10 @@ header.scrolled {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     color: var(--text-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    font-size: 1.2rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 1.15rem;
     cursor: pointer;
     align-items: center;
     justify-content: center;

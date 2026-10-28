@@ -1,35 +1,33 @@
-// Theme Toggle
+// Theme Toggle with Proper Class Sync & Meta Theme-Color Update
 const themeToggles = document.querySelectorAll('.theme-toggle');
 const body = document.body;
+const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 
-// Applies the saved or default theme
+const applyTheme = (theme) => {
+    body.classList.remove('dark-mode', 'light-mode');
+    body.classList.add(theme);
+
+    const isDark = theme === 'dark-mode';
+    if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', isDark ? '#07080d' : '#f8fafc');
+    }
+
+    themeToggles.forEach(btn => {
+        btn.innerHTML = isDark
+            ? '<i class="fas fa-moon"></i>'
+            : '<i class="fas fa-sun"></i>';
+        btn.style.transform = isDark ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+};
+
+// Apply saved or default theme on load
 const savedTheme = localStorage.getItem('theme') || 'dark-mode';
-body.classList.add(savedTheme);
-themeToggles.forEach(themeToggle => {
-    themeToggle.innerHTML = savedTheme === 'dark-mode'
-        ? '<i class="fas fa-moon"></i>'
-        : '<i class="fas fa-sun"></i>';
-    themeToggle.style.transform = savedTheme === 'dark-mode' ? 'rotate(0deg)' : 'rotate(180deg)';
-});
+applyTheme(savedTheme);
 
 themeToggles.forEach(themeToggle => {
     themeToggle.addEventListener('click', () => {
-        if (body.classList.contains('dark-mode')) {
-            body.classList.remove('dark-mode');
-            body.classList.add('light-mode');
-            themeToggles.forEach(btn => {
-                btn.innerHTML = '<i class="fas fa-sun"></i>';
-                btn.style.transform = 'rotate(180deg)';
-            });
-            localStorage.setItem('theme', 'light-mode');
-        } else {
-            body.classList.remove('light-mode');
-            body.classList.add('dark-mode');
-            themeToggles.forEach(btn => {
-                btn.innerHTML = '<i class="fas fa-moon"></i>';
-                btn.style.transform = 'rotate(0deg)';
-            });
-            localStorage.setItem('theme', 'dark-mode');
-        }
+        const nextTheme = body.classList.contains('dark-mode') ? 'light-mode' : 'dark-mode';
+        applyTheme(nextTheme);
+        localStorage.setItem('theme', nextTheme);
     });
 });

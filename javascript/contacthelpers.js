@@ -1,4 +1,4 @@
-// Contact Helpers, Async Form & Scroll Progress
+// Contact Helpers, Subject Quick Pills, Async Form & Scroll Progress
 document.addEventListener('DOMContentLoaded', () => {
     const toastNotification = document.getElementById('toast-notification');
     let toastTimeout;
@@ -24,14 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 await navigator.clipboard.writeText(email);
                 showToast('E-mail copiado com sucesso!');
                 
-                // Visual feedback on the button
                 const originalHTML = copyEmailBtn.innerHTML;
                 copyEmailBtn.innerHTML = '<i class="fas fa-check"></i> Copiado!';
                 setTimeout(() => {
                     copyEmailBtn.innerHTML = originalHTML;
                 }, 2000);
             } catch (err) {
-                // Fallback for older browsers
                 const textArea = document.createElement('textarea');
                 textArea.value = email;
                 document.body.appendChild(textArea);
@@ -43,7 +41,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Async Contact Form Submission (No page reload)
+    // 2. Quick Subject Pills for Recruiters & Clients
+    const subjectPills = document.querySelectorAll('.subject-pill');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.getElementById('message');
+
+    if (subjectPills.length && subjectInput) {
+        subjectPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                subjectPills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                const selectedSubject = pill.getAttribute('data-subject');
+                if (selectedSubject) {
+                    subjectInput.value = selectedSubject;
+                }
+                if (messageInput && !messageInput.value.trim()) {
+                    const placeholderHint = pill.getAttribute('data-placeholder');
+                    if (placeholderHint) {
+                        messageInput.placeholder = placeholderHint;
+                    }
+                }
+                subjectInput.focus();
+            });
+        });
+    }
+
+    // 3. Async Contact Form Submission (No page reload)
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
@@ -69,12 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (response.ok) {
                     showToast('Mensagem enviada com sucesso! Responderei em breve.');
                     contactForm.reset();
+                    subjectPills.forEach(p => p.classList.remove('active'));
                 } else {
                     showToast('Mensagem recebida! Responderei em breve.');
                     contactForm.reset();
+                    subjectPills.forEach(p => p.classList.remove('active'));
                 }
             } catch (error) {
-                // In case of network error, fallback to submitting via standard post or alert user
                 showToast('Conexão instável. Você também pode enviar diretamente para mm.maffi@outlook.com');
             } finally {
                 if (submitBtn) {
@@ -85,33 +109,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Scroll Progress Bar
+    // 4. Scroll Progress Bar & Active Navigation Highlighter (throttled via rAF)
     const progressBar = document.querySelector('.scroll-progress-bar');
-    const updateScrollProgress = () => {
-        if (!progressBar) return;
-        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-        if (totalHeight > 0) {
-            const progress = (window.scrollY / totalHeight) * 100;
-            progressBar.style.width = `${progress}%`;
-        }
-    };
-
-    window.addEventListener('scroll', updateScrollProgress, { passive: true });
-    updateScrollProgress();
-
-    // 4. Highlight Active Navigation Links on Scroll
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    let isTicking = false;
 
-    const highlightActiveNav = () => {
-        const scrollY = window.pageYOffset + 120;
+    const onScrollUpdate = () => {
+        const scrollY = window.scrollY;
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
 
+        if (progressBar && totalHeight > 0) {
+            const progress = (scrollY / totalHeight) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        const currentScrollPos = scrollY + 140;
         sections.forEach(section => {
             const sectionHeight = section.offsetHeight;
             const sectionTop = section.offsetTop - 100;
             const sectionId = section.getAttribute('id');
 
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            if (currentScrollPos > sectionTop && currentScrollPos <= sectionTop + sectionHeight) {
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${sectionId}`) {
@@ -120,7 +139,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+
+        isTicking = false;
     };
 
-    window.addEventListener('scroll', highlightActiveNav, { passive: true });
+    window.addEventListener('scroll', () => {
+        if (!isTicking) {
+            window.requestAnimationFrame(onScrollUpdate);
+            isTicking = true;
+        }
+    }, { passive: true });
+
+    onScrollUpdate();
 });
