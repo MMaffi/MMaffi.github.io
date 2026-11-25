@@ -6,7 +6,7 @@ Bem-vindo ao repositório do meu portfólio profissional: **[https://mmaffi.gith
 
 ## Sobre Mim
 
-Sou **Desenvolvedor Full-Stack** e graduando em **Sistemas de Informação** pela **Universidade Federal de Mato Grosso do Sul (UFMS – Campus Três Lagoas)**. Iniciei minha jornada na programação aos 16 anos e desenvolvo desde plataformas SaaS completas e aplicações PWA até softwares desktop com interface gráfica e scripts de automação.
+Sou **Desenvolvedor Full-Stack na FX Sistemas** (promovido internamente em julho de 2026 após atuação como Analista de Suporte Técnico) e graduando em **Sistemas de Informação** pela **Universidade Federal de Mato Grosso do Sul (UFMS – Campus Três Lagoas)**. Iniciei minha jornada na programação aos 16 anos e desenvolvo desde plataformas SaaS completas e aplicações PWA até softwares desktop com interface gráfica e scripts de automação.
 
 ---
 
