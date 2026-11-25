@@ -1,0 +1,511 @@
+/* ==========================================================================
+   Global Layout Chrome: Ambient Backdrop, Header, Mobile Drawer,
+   Scroll Progress, Footer, Back-to-Top, Toast & Easter Egg
+   ========================================================================== */
+
+/* Zero-JS Static Architectural Ambient Background (zero blur filters, 120fps scroll) */
+.site-ambient {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: var(--bg);
+    background-image:
+        radial-gradient(ellipse 68% 48% at 18% -6%, rgba(99, 102, 241, 0.14), transparent 64%),
+        radial-gradient(ellipse 56% 42% at 86% 6%, rgba(16, 185, 129, 0.09), transparent 62%),
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+}
+
+.light-mode .site-ambient {
+    background-image:
+        radial-gradient(ellipse 68% 48% at 18% -6%, rgba(79, 70, 229, 0.08), transparent 64%),
+        radial-gradient(ellipse 56% 42% at 86% 6%, rgba(6, 182, 212, 0.07), transparent 62%),
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}
+
+/* GPU-Composited Scroll Progress Bar (scaleX only — zero layout cost) */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gradient-brand);
+    transform: scaleX(0);
+    transform-origin: left center;
+    z-index: 10010;
+    pointer-events: none;
+    will-change: transform;
+}
+
+/* Fixed Header (only surface using backdrop-filter for crisp legibility) */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    background: var(--header-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: padding var(--duration-base) var(--ease-out),
+                box-shadow var(--duration-base) ease,
+                border-color var(--duration-base) ease;
+}
+
+.site-header.is-scrolled {
+    padding: 10px 0;
+    box-shadow: var(--shadow-md);
+    border-bottom-color: var(--border-strong);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: var(--text);
+    flex-shrink: 0;
+}
+
+.brand-dot {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.brand-tag {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: var(--radius-full);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-border);
+    color: var(--accent-light);
+    letter-spacing: 0.03em;
+}
+
+/* Desktop Nav Pill Bar */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2px;
+    padding: 4px;
+    border-radius: var(--radius-full);
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: var(--radius-full);
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    transition: color var(--duration-fast) ease,
+                background-color var(--duration-fast) ease;
+}
+
+.nav-link:hover {
+    color: var(--text);
+    background: var(--accent-soft);
+}
+
+.nav-link.active {
+    color: #ffffff;
+    background: var(--gradient-brand);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.84rem;
+    font-weight: 700;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-border);
+    color: var(--text);
+    transition: transform var(--duration-fast) var(--ease-out),
+                background-color var(--duration-fast) ease,
+                border-color var(--duration-fast) ease,
+                color var(--duration-fast) ease;
+}
+
+.header-cta i {
+    color: var(--accent-light);
+    font-size: 0.82rem;
+}
+
+.header-cta:hover {
+    background: var(--gradient-brand);
+    border-color: transparent;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.header-cta:hover i {
+    color: #ffffff;
+}
+
+.icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.98rem;
+    transition: transform var(--duration-base) var(--ease-out),
+                border-color var(--duration-fast) ease,
+                color var(--duration-fast) ease;
+}
+
+.icon-btn:hover {
+    border-color: var(--accent-border);
+    color: var(--accent-light);
+    transform: translateY(-1px);
+}
+
+.mobile-menu-btn {
+    display: none;
+    border-radius: var(--radius-xs);
+}
+
+.mobile-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: var(--overlay-bg);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--duration-base) ease, visibility var(--duration-base) ease;
+}
+
+.mobile-drawer-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-mobile-footer {
+    display: none;
+}
+
+/* Footer */
+.site-footer {
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border);
+    padding: 44px 0 34px;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#footer-logo {
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.45rem;
+}
+
+.footer-tagline {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+.footer-nav a {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: color var(--duration-fast) ease;
+}
+
+.footer-nav a:hover {
+    color: var(--accent-light);
+}
+
+.footer-copy {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+}
+
+/* Sleek Back-to-Top with SVG Progress Ring */
+.back-to-top {
+    position: fixed;
+    right: 26px;
+    bottom: 26px;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 900;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 14px, 0);
+    transition: opacity var(--duration-base) ease,
+                visibility var(--duration-base) ease,
+                transform var(--duration-base) var(--ease-out),
+                border-color var(--duration-fast) ease,
+                color var(--duration-fast) ease;
+}
+
+.back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+}
+
+.back-to-top:hover {
+    transform: translate3d(0, -3px, 0);
+    border-color: var(--accent-border);
+    color: var(--accent-light);
+}
+
+.back-to-top svg {
+    position: absolute;
+    inset: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    transform: rotate(-90deg);
+    pointer-events: none;
+}
+
+.back-to-top .progress-ring-track {
+    fill: none;
+    stroke: transparent;
+    stroke-width: 2.5;
+}
+
+.back-to-top .progress-ring-bar {
+    fill: none;
+    stroke: var(--accent-light);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-dasharray: 138.23;
+    stroke-dashoffset: 138.23;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    right: 26px;
+    bottom: 26px;
+    z-index: 10015;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 13px 20px;
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    border: 1px solid var(--emerald-border);
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-lg);
+    transform: translate3d(0, 24px, 0);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform var(--duration-base) var(--ease-out),
+                opacity var(--duration-base) ease,
+                visibility var(--duration-base) ease;
+}
+
+.toast.is-visible {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.toast i {
+    color: var(--emerald-light);
+    font-size: 1.1rem;
+}
+
+/* Easter Egg Overlay */
+.easter-egg {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(to top, #04050a 58%, #151738);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 10030;
+    overflow: hidden;
+}
+
+.easter-egg.is-hidden {
+    display: none;
+}
+
+.easter-egg-rocket {
+    font-size: 4rem;
+    animation: eeFly 3s ease-in forwards;
+}
+
+.easter-egg-planet {
+    font-size: 6rem;
+    position: absolute;
+    bottom: -150px;
+    opacity: 0;
+    animation: eePlanet 2.8s 2.8s forwards;
+}
+
+@keyframes eeFly {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(0, -120vh, 0); }
+}
+
+@keyframes eePlanet {
+    0% { transform: translate3d(0, 0, 0); opacity: 0; }
+    100% { transform: translate3d(0, -180px, 0); opacity: 1; }
+}
+
+/* Responsive Header & Footer */
+@media (max-width: 960px) {
+    .brand-tag,
+    .header-cta {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: inline-flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(82vw, 310px);
+        height: 100dvh;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        gap: 6px;
+        padding: 84px 24px 36px;
+        border-radius: 0;
+        border: none;
+        border-left: 1px solid var(--border-strong);
+        background: var(--surface);
+        box-shadow: var(--shadow-lg);
+        z-index: 999;
+        transform: translate3d(105%, 0, 0);
+        transition: transform var(--duration-base) var(--ease-out);
+    }
+
+    .nav-menu.is-open {
+        transform: translate3d(0, 0, 0);
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        padding: 12px 18px;
+        text-align: center;
+        font-size: 0.98rem;
+    }
+
+    .nav-mobile-footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 18px;
+        padding-top: 18px;
+        border-top: 1px solid var(--border);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 18px;
+    }
+
+    section {
+        padding: 78px 0;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-brand {
+        align-items: center;
+    }
+
+    .footer-nav {
+        justify-content: center;
+    }
+
+    .back-to-top {
+        right: 18px;
+        bottom: 18px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .toast {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        justify-content: center;
+    }
+}

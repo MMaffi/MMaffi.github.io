@@ -1,72 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Title -->
-    <title>404 | Página Não Encontrada - MMaffi</title>
-
-    <!-- Meta Tags -->
+    <title>404 | Página Não Encontrada — MMaffi</title>
     <meta name="description" content="A página que você tentou acessar não existe ou foi movida. Volte ao portfólio oficial de Mateus Maffi.">
     <meta name="robots" content="noindex, follow">
-    <meta name="theme-color" content="#090a10">
+    <meta name="theme-color" content="#07080d">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./images/MM_logo.png" type="image/x-icon">
-
-    <!-- Google Fonts -->
+    <link rel="icon" href="./images/MM_logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/tokens.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/404.css">
 
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="./css/variables.css">
-    <link rel="stylesheet" href="./css/404style.css">
-    <link rel="stylesheet" href="./css/scrollbar.css">
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('theme') === 'light-mode') {
+                    document.documentElement.classList.add('light-mode');
+                }
+            } catch (_) {}
+        })();
+    </script>
 </head>
-<body class="dark-mode">
-    <div class="floating-elements">
-        <div class="floating-element" style="width: 100px; height: 100px; top: 10%; left: 5%; animation-delay: 0s;"></div>
-        <div class="floating-element" style="width: 150px; height: 150px; top: 60%; left: 80%; animation-delay: -5s;"></div>
-        <div class="floating-element" style="width: 80px; height: 80px; top: 80%; left: 10%; animation-delay: -10s;"></div>
-        <div class="floating-element" style="width: 120px; height: 120px; top: 20%; left: 70%; animation-delay: -15s;"></div>
-    </div>
 
-    <div class="container">
-        <div class="error-card">
-            <div class="error-badge">
-                <i class="fas fa-exclamation-triangle"></i> Erro 404
+<body>
+    <div class="site-ambient" aria-hidden="true"></div>
+
+    <main class="error-page">
+        <div class="error-shell">
+            <div class="error-card">
+                <span class="section-eyebrow">
+                    <i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Erro 404
+                </span>
+                <h1 class="error-code">404</h1>
+                <h2 class="error-title">Página Não Encontrada</h2>
+                <p class="error-desc">
+                    A rota ou página que você tentou acessar não existe, foi alterada ou removida. Retorne com segurança
+                    ao portfólio principal.
+                </p>
+                <div class="error-actions">
+                    <a href="./index.html" class="btn btn-primary">
+                        <i class="fas fa-home" aria-hidden="true"></i> Voltar ao Início
+                    </a>
+                    <button type="button" class="btn btn-secondary" onclick="window.history.back()">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i> Página Anterior
+                    </button>
+                </div>
             </div>
 
-            <h1 class="error-code">404</h1>
-            <h2 class="error-title">Página Não Encontrada</h2>
-            <p class="error-description">
-                A rota ou página que você está tentando acessar não existe, foi alterada ou removida.
-                Volte com segurança para a página principal.
-            </p>
-            
-            <div class="action-buttons">
-                <a href="./index.html" class="btn btn-primary">
-                    <i class="fas fa-home"></i>
-                    Voltar ao Início
-                </a>
-                <a href="javascript:history.back()" class="btn btn-secondary">
-                    <i class="fas fa-arrow-left"></i>
-                    Página Anterior
-                </a>
-            </div>
+            <p class="error-footer">© MMaffi — Engenharia Full-Stack</p>
         </div>
-        
-        <p class="error-footer">
-            © MMaffi. Desenvolvedor Full-Stack.
-        </p>
-    </div>
-
-    <!-- Script Links -->
-    <script src="./javascript/themetoggle.js"></script>
+    </main>
 </body>
+
 </html>

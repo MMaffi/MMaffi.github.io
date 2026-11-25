@@ -1,0 +1,294 @@
+/* ==========================================================================
+   Base, Reset, Typography, Primitives & Performant Reveal Animations
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 18px);
+    color-scheme: dark light;
+    /* overflow-x: clip avoids creating a second scroll container and preserves position: sticky */
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.68;
+    overflow-x: clip;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body.theme-transitioning {
+    transition: background-color 280ms ease, color 280ms ease;
+}
+
+::selection {
+    background: rgba(99, 102, 241, 0.32);
+    color: #ffffff;
+}
+
+.light-mode ::selection {
+    background: rgba(79, 70, 229, 0.18);
+    color: #0f172a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--text);
+    letter-spacing: -0.03em;
+    line-height: 1.18;
+    overflow-wrap: break-word;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+    color: inherit;
+}
+
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Custom Scrollbar (thin & unobtrusive) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* Accessible Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent-light);
+    outline-offset: 3px;
+}
+
+/* Skip Link */
+.skip-link {
+    position: fixed;
+    top: -100px;
+    left: 16px;
+    z-index: 10020;
+    padding: 10px 18px;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.88rem;
+    border-radius: var(--radius-full);
+    transition: top var(--duration-fast) var(--ease-out);
+}
+
+.skip-link:focus {
+    top: 16px;
+}
+
+/* Container & Grid Overflow Safeguards */
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.hero-grid > *,
+.hero-metrics > *,
+.about-grid > *,
+.about-pillars > *,
+.projects-grid > *,
+.services-grid > *,
+.benefits-grid > *,
+.solutions-grid > *,
+.process-steps > *,
+.contact-grid > * {
+    min-width: 0;
+}
+
+/* Section Rhythm & Headings */
+section {
+    padding: 104px 0;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 56px;
+}
+
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-border);
+    color: var(--accent-light);
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.section-header h2 {
+    font-size: clamp(1.95rem, 3.6vw, 2.75rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    margin-bottom: 14px;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.02rem;
+    line-height: 1.7;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 24px;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 0.92rem;
+    line-height: 1;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform var(--duration-base) var(--ease-out),
+                box-shadow var(--duration-base) var(--ease-out),
+                background-color var(--duration-fast) ease,
+                border-color var(--duration-fast) ease,
+                color var(--duration-fast) ease;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: var(--gradient-brand);
+    color: #ffffff;
+    box-shadow: var(--shadow-accent);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px -8px rgba(99, 102, 241, 0.54);
+}
+
+.btn-secondary {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+    background: var(--surface-hover);
+    border-color: var(--accent-border);
+    color: var(--accent-light);
+    transform: translateY(-2px);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text-secondary);
+    border-color: var(--border);
+}
+
+.btn-ghost:hover {
+    color: var(--text);
+    background: var(--accent-soft);
+    border-color: var(--accent-border);
+    transform: translateY(-2px);
+}
+
+.btn-sm {
+    padding: 9px 18px;
+    font-size: 0.84rem;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Lightweight GPU-Composited Reveal System */
+.reveal {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    transition: opacity var(--duration-slow) var(--ease-out),
+                transform var(--duration-slow) var(--ease-out);
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.delay-1 { transition-delay: 60ms; }
+.delay-2 { transition-delay: 120ms; }
+.delay-3 { transition-delay: 180ms; }
+.delay-4 { transition-delay: 240ms; }
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
